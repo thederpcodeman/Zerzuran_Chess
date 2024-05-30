@@ -1,15 +1,18 @@
 package Zerzuran_Chess.src.pieces;
 
 import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.ChessGame;
 import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 
 public class Duck extends Piece {
+    public int bonusMove;
     public Duck(int color) {
         super(color);
-        value = 1;
+        value = -1;
         name = "Duck";
+        bonusMove = 0;
     }
 
     @Override
@@ -28,6 +31,10 @@ public class Duck extends Piece {
         if (destination.getPiece() == null){
             if (forReal){
                 color = 1 - color;
+                if (bonusMove == 0){
+                    bonusMove = 2;
+                    ChessGame.turn = (1 - ChessGame.turn);
+                }
             }
             return true;
         }
