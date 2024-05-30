@@ -195,6 +195,13 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         Tile start = move.start;
         boolean resp = (move.end.getPiece() != null && re);
         if (start != null && (start.isPlayableMove(location, chessBoard, true) != 0)) {
+            if ((move.end.getPiece() != null) && (move.end.getPiece() instanceof Militia)){ // when militias die, the player controling them loses radness
+                if (move.end.getPiece().getColor() == 0){
+                    Board.bRadness /= 2;
+                }else if (move.end.getPiece().getColor() == 1){
+                    Board.wRadness /= 2;
+                }
+            }
             if (start.getPiece() instanceof AugmentedKnight){
                 ((AugmentedKnight) start.getPiece()).justMoved(Board.getYFromLocation(move.end.getLocationOnBoard()), start);
             }

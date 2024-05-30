@@ -331,7 +331,6 @@ public class Tile extends JPanel {
         }
         if (o > 5){
             o -= 5;
-            ArrayList<String> bonus = new ArrayList<>();
             ArrayList<String> bonusOptions = new ArrayList<>();
             bonusOptions.add("King");
             bonusOptions.add("Amazon");
@@ -352,7 +351,19 @@ public class Tile extends JPanel {
                 possibilities.add(bonusOptions.get(2));
                 possibilities.add(bonusOptions.get(3));
             }
+            Collections.shuffle(possibilities);
             o = 5;
+        }
+        if (o < 3){
+            o = 3 - o;
+            for (int i = 0; i < o; i++){
+                possibilities.add("Turn around");
+                possibilities.add("Turn around");
+                possibilities.add("No thank you.");
+                possibilities.add("No thank you.");
+            }
+            Collections.shuffle(possibilities);
+            o = 3;
         }
         String[] options = new String[o];
         for (int i = 0; i < o; i++){
