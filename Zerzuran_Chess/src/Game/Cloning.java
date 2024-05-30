@@ -188,7 +188,7 @@ public class Cloning {
         return null;
     }
     public static Piece rPawn(int color){
-        double ran = (Math.random() * (3 + 1.5 + 1 + 1 + 0.5 + 0.5 + 0.2 + 0.01));
+        double ran = (Math.random() * (3 + 1.5 + 1 + 1 + 1 + 0.5 + 0.5 + 0.2 + 0.01));
         if (ran < 3){
             return new Pawn(color);
         } ran -= 3;
@@ -197,6 +197,9 @@ public class Cloning {
         } ran -= 1.5;
         if (ran < 1){
             return new Pikeman(color);
+        } ran -= 1;
+        if (ran < 1){
+            return new Militia(color);
         } ran -= 1;
         if (ran < 1){
             return new Prince(color);
@@ -216,7 +219,7 @@ public class Cloning {
         return null;
     }
     public static Piece Fear(int color){
-        int ran = (int) (Math.random() * 46);
+        int ran = (int) (Math.random() * 47);
         if (ran == 0){
             return new Elephant(color);
         } else if (ran == 1){
@@ -309,6 +312,8 @@ public class Cloning {
             return new Empress(color);
         } else if (ran == 45){
             return new Crusader(color);
+        } else if (ran == 46){
+            return new Militia(color);
         }
         return (null);
     }
