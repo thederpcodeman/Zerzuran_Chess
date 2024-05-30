@@ -85,6 +85,10 @@ public class Tile extends JPanel {
             int col = getPiece().color;
             AudioPlayer.play("src/resources/audio/promote.wav");
             setPiece(new Templar(col));
+        }else if ( (getPiece() instanceof Boat && (((Board.getYFromLocation(getLocationOnBoard()) == 0) && (( getPiece()).getForwardDirection() == -1)) || ((Board.getYFromLocation(getLocationOnBoard()) == 7) && (( getPiece()).getForwardDirection() == 1))))){
+            int col = getPiece().color;
+            AudioPlayer.play("src/resources/audio/promote.wav");
+            setPiece(new Gryphon(col));
         }
         revalidate();
         repaint();
