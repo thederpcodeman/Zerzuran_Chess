@@ -350,6 +350,13 @@ public class Tile extends JPanel {
                 possibilities.add(bonusOptions.get(1));
                 possibilities.add(bonusOptions.get(2));
                 possibilities.add(bonusOptions.get(3));
+                int bad = possibilities.indexOf("No thank you.");
+                if (bad == -1){
+                    bad = possibilities.indexOf("Turn around");
+                }
+                if (bad != -1){
+                    possibilities.remove(bad);
+                }
             }
             Collections.shuffle(possibilities);
             o = 5;
