@@ -324,6 +324,7 @@ public class Tile extends JPanel {
         possibilities.add("Empress");
         possibilities.add("Theocrat");
         possibilities.add("Keegan");
+        possibilities.add("Seraphim");
 
         Collections.shuffle(possibilities);
         int o = 3;
@@ -454,6 +455,8 @@ public class Tile extends JPanel {
                 setPiece(new Empress(piece.getColor()));
             } else if (s == "Templar") {
                 setPiece(new Templar(piece.getColor()));
+            } else if (s == "Seraphim") {
+                setPiece(new Seraphim(piece.getColor()));
             }
 
             if (roy && getPiece() != null){
