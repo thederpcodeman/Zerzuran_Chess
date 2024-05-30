@@ -1,9 +1,9 @@
 package Zerzuran_Chess.src.Game;
 
 import Zerzuran_Chess.src.pieces.*;
-import pieces.pawns.Pawn;
-import pieces.royals.General;
-import pieces.royals.King;
+import Zerzuran_Chess.src.pieces.pawns.Pawn;
+import Zerzuran_Chess.src.pieces.royals.General;
+import Zerzuran_Chess.src.pieces.royals.King;
 
 import javax.swing.*;
 import java.awt.*;

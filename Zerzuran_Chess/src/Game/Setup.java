@@ -1,12 +1,12 @@
 package Zerzuran_Chess.src.Game;
 
-import pieces.*;
-import pieces.Unique.CheckerButNot;
-import pieces.pawns.Checker;
-import pieces.pawns.Pawn;
-import pieces.pawns.Soldier;
-import pieces.Unique.StepPawn;
-import pieces.royals.King;
+import Zerzuran_Chess.src.pieces.*;
+import Zerzuran_Chess.src.pieces.Unique.CheckerButNot;
+import Zerzuran_Chess.src.pieces.pawns.Checker;
+import Zerzuran_Chess.src.pieces.pawns.Pawn;
+import Zerzuran_Chess.src.pieces.pawns.Soldier;
+import Zerzuran_Chess.src.pieces.Unique.StepPawn;
+import Zerzuran_Chess.src.pieces.royals.King;
 
 import java.util.ArrayList;
 

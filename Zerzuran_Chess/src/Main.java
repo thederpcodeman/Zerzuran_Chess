@@ -1,6 +1,6 @@
 package Zerzuran_Chess.src;
 
-import Game.ChessGame;
+import Zerzuran_Chess.src.Game.ChessGame;
 
 import javax.swing.*;
 import java.awt.*;

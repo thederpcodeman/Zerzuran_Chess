@@ -1,7 +1,7 @@
-package pieces.pawns;
+package Zerzuran_Chess.src.pieces.pawns;
 
-import Game.Board;
-import Game.Tile;
+import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 

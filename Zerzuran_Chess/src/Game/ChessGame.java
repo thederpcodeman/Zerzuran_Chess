@@ -3,10 +3,10 @@ package Zerzuran_Chess.src.Game;
 import Zerzuran_Chess.src.pieces.*;
 import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
 import Zerzuran_Chess.src.pieces.Assassins.Assassin;
-import pieces.Assassins.Bladedancer;
-import pieces.Unique.CheckerButNot;
-import pieces.Unique.StepPawn;
-import pieces.Unique.shortRook;
+import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
+import Zerzuran_Chess.src.pieces.Unique.CheckerButNot;
+import Zerzuran_Chess.src.pieces.Unique.StepPawn;
+import Zerzuran_Chess.src.pieces.Unique.shortRook;
 import Zerzuran_Chess.src.pieces.pawns.*;
 import Zerzuran_Chess.src.pieces.royals.*;
 

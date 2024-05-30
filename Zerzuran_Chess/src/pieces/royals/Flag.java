@@ -1,8 +1,8 @@
-package pieces.royals;
+package Zerzuran_Chess.src.pieces.royals;
 
-import Game.Board;
-import Game.Tile;
-import pieces.*;
+import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.Tile;
+import Zerzuran_Chess.src.pieces.*;
 
 import javax.swing.*;
 

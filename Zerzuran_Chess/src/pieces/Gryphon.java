@@ -1,9 +1,9 @@
-package pieces;
+package Zerzuran_Chess.src.pieces;
 
-        import Game.Board;
-        import Game.Tile;
+import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.Tile;
 
-        import javax.swing.*;
+import javax.swing.*;
 
 public class Gryphon extends Piece {
     public Gryphon(int color) {

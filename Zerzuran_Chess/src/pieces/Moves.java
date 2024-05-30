@@ -1,8 +1,8 @@
 package Zerzuran_Chess.src.pieces;
 
-import Game.Board;
-import Game.ChessGame;
-import Game.Tile;
+import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.ChessGame;
+import Zerzuran_Chess.src.Game.Tile;
 
 public class Moves {
 

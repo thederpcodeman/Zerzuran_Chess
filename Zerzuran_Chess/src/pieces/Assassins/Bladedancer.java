@@ -1,10 +1,10 @@
-package pieces.Assassins;
+package Zerzuran_Chess.src.pieces.Assassins;
 
-import Game.Board;
-import Game.ChessGame;
-import Game.Tile;
-import pieces.Moves;
-import pieces.Piece;
+import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.ChessGame;
+import Zerzuran_Chess.src.Game.Tile;
+import Zerzuran_Chess.src.pieces.Moves;
+import Zerzuran_Chess.src.pieces.Piece;
 
 import javax.swing.*;
 
