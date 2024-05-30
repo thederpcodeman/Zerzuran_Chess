@@ -211,7 +211,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     Board.bRadness -= 3;
                 }
             }
-            if (start.getPiece() instanceof AugmentedKnight){
+            if (start.getPiece() instanceof AugmentedKnight){ //gain augments
                 ((AugmentedKnight) start.getPiece()).justMoved(Board.getYFromLocation(move.end.getLocationOnBoard()), start);
             }
             //process move
