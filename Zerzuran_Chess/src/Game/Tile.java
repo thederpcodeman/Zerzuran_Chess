@@ -324,10 +324,12 @@ public class Tile extends JPanel {
         int o = 3;
         if (getPiece().getColor() == 0){
             o = Board.bRadness;
+            o += (int) (Math.random() * 3) - 1;
             Board.bRadness += 1;
         }else if (getPiece().getColor() == 1){
             o = Board.wRadness;
             Board.wRadness += 1;
+            o += (int) (Math.random() * 3) - 1;
         }
         if (o > 5){
             o -= 5;
