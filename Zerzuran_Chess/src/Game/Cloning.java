@@ -151,17 +151,24 @@ public class Cloning {
     }
 
     public static Piece Super(int color){
-        int ran = (int) (Math.random() * 5);
-        if (ran == 0){
+        double ran = (Math.random() * 6.5);
+        if (ran < 1.4) {
             return new Lion(color);
-        } else if (ran == 1){
+        } ran -= 1.3;
+        if (ran < 1) {
             return new Amazon(color);
-        } else if (ran == 2){
+        } ran -= 1.2;
+        if (ran < 1) {
             return new Greatwyrm(color);
-        } else if (ran == 3){
+        } ran -= 1.1;
+        if (ran < 1) {
             return new Quetzacoatl(color);
-        }  else if (ran == 4){
+        } ran -= 1;
+        if (ran < 1) {
             return new Wolf(color);
+        } ran -= 1;
+        if (ran < 0.5){
+            return new Seraphim(color);
         }
         return null;
     }
@@ -223,7 +230,7 @@ public class Cloning {
         return null;
     }
     public static Piece Fear(int color){
-        int ran = (int) (Math.random() * 48);
+        int ran = (int) (Math.random() * 49);
         if (ran == 0){
             return new Elephant(color);
         } else if (ran == 1){
@@ -320,6 +327,8 @@ public class Cloning {
             return new Militia(color);
         } else if (ran == 47){
             return new shortRook(color);
+        } else if (ran == 48){
+            return new Seraphim(color);
         }
         return (null);
     }

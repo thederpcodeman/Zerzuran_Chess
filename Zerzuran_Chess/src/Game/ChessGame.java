@@ -456,7 +456,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                         setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/bUnknown.png"));
                     }
                 }else if (skatter){
-                    newname = "Chesscapades";
+                    newname = "Zerzuran Chess";
                     setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wKnight.png"));
                 }else{
                     newname = tile.getPiece().name;
