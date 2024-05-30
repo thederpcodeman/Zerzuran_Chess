@@ -226,6 +226,7 @@ public class Tile extends JPanel {
         possibilities.add("Turn around");
         possibilities.add("Turn around");
         possibilities.add("Turn around");
+        possibilities.add("Turn around");
 
         possibilities.add("No thank you.");
         possibilities.add("No thank you.");
@@ -312,19 +313,7 @@ public class Tile extends JPanel {
         possibilities.add("Templar");
         possibilities.add("Templar");
 
-        possibilities.add("King");
-        possibilities.add("Amazon");
-        possibilities.add("General");
-        possibilities.add("Lion");
-        possibilities.add("Tyrant");
-        possibilities.add("Greatwyrm");
-        possibilities.add("Flag bearer");
-        possibilities.add("Quetzalcoatl");
-        possibilities.add("Wolf");
-        possibilities.add("Empress");
-        possibilities.add("Theocrat");
-        possibilities.add("Keegan");
-        possibilities.add("Seraphim");
+
 
         Collections.shuffle(possibilities);
         int o = 3;
@@ -333,8 +322,30 @@ public class Tile extends JPanel {
         }else if (getPiece().getColor() == 1){
             o = Board.wRadness;
         }
-        if (o > 10){
-            o = 10;
+        if (o > 5){
+            o -= 5;
+            ArrayList<String> bonus = new ArrayList<>();
+            ArrayList<String> bonusOptions = new ArrayList<>();
+            bonusOptions.add("King");
+            bonusOptions.add("Amazon");
+            bonusOptions.add("General");
+            bonusOptions.add("Lion");
+            bonusOptions.add("Tyrant");
+            bonusOptions.add("Greatwyrm");
+            bonusOptions.add("Flag bearer");
+            bonusOptions.add("Quetzalcoatl");
+            bonusOptions.add("Wolf");
+            bonusOptions.add("Empress");
+            bonusOptions.add("Theocrat");
+            bonusOptions.add("Keegan");
+            bonusOptions.add("Seraphim");
+            for (int i = 0; i < o; i++){
+                Collections.shuffle(bonusOptions);
+                possibilities.add(bonusOptions.get(1));
+                possibilities.add(bonusOptions.get(2));
+                possibilities.add(bonusOptions.get(3));
+            }
+            o = 5;
         }
         String[] options = new String[o];
         for (int i = 0; i < o; i++){
