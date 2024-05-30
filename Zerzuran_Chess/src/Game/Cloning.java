@@ -4,12 +4,13 @@ import Zerzuran_Chess.src.pieces.*;
 import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
 import Zerzuran_Chess.src.pieces.Assassins.Assassin;
 import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
+import Zerzuran_Chess.src.pieces.Unique.shortRook;
 import Zerzuran_Chess.src.pieces.pawns.*;
 import Zerzuran_Chess.src.pieces.royals.*;
 
 public class Cloning {
     public static Piece Common(int color){
-        double ran = (Math.random() * (5 +  1.6 + 2.2 + 0.334 + 0.334 + 0.3 + 0.25 + 0.2 + 0.15 + 0.1));
+        double ran = (Math.random() * (5 +  1.6 + 2.2 + 0.334 + 0.334 + 0.334 + 0.3 + 0.25 + 0.2 + 0.15 + 0.1));
         if (ran < 1){
             return new Rook(color);
         } ran -= 1;
@@ -48,6 +49,9 @@ public class Cloning {
         } ran -= 0.5;
         if (ran < 0.334){
             return new Spearman(color);
+        } ran -= 0.334;
+        if (ran < 0.334){
+            return new shortRook(color);
         } ran -= 0.334;
         if (ran < 0.334){
             return new AugmentedKnight(color);
@@ -188,7 +192,7 @@ public class Cloning {
         return null;
     }
     public static Piece rPawn(int color){
-        double ran = (Math.random() * (3 + 1.5 + 1 + 1 + 1 + 0.5 + 0.5 + 0.2 + 0.01));
+        double ran = (Math.random() * (3 + 1.5 + 1 + 0.75 + 1 + 0.5 + 0.5 + 0.2 + 0.01));
         if (ran < 3){
             return new Pawn(color);
         } ran -= 3;
@@ -198,9 +202,9 @@ public class Cloning {
         if (ran < 1){
             return new Pikeman(color);
         } ran -= 1;
-        if (ran < 1){
+        if (ran < 0.75){
             return new Militia(color);
-        } ran -= 1;
+        } ran -= 0.75;
         if (ran < 1){
             return new Prince(color);
         } ran -= 1;
@@ -219,7 +223,7 @@ public class Cloning {
         return null;
     }
     public static Piece Fear(int color){
-        int ran = (int) (Math.random() * 47);
+        int ran = (int) (Math.random() * 48);
         if (ran == 0){
             return new Elephant(color);
         } else if (ran == 1){
@@ -314,6 +318,8 @@ public class Cloning {
             return new Crusader(color);
         } else if (ran == 46){
             return new Militia(color);
+        } else if (ran == 47){
+            return new shortRook(color);
         }
         return (null);
     }

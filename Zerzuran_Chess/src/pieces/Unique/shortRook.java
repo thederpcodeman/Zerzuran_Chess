@@ -12,6 +12,15 @@ public class shortRook extends Rook {
         value = 4;
         name = "Short Rook";
     }
+    public ImageIcon getImageIcon() {
+        if(color == 0) {
+            return(new ImageIcon("src/resources/bSRook.png"));
+        } else if(color == 1) {
+            return(new ImageIcon("src/resources/wSRook.png"));
+        } else {
+            return null;
+        }
+    }
 
     @Override
     public boolean isLegalMove(int x, int y, int newX, int newY, Board board, boolean forReal){
