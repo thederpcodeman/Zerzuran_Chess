@@ -51,7 +51,7 @@ public class BarolinaPawn extends Pawn {
                 return (Moves.allClear(color, destination));
             }
         }else if (Math.abs(dx) == 2){
-            if (dy == getForwardDirection() * 2 && !destination.isOccupied() && !board.getTile(Board.getLocationFromCords(x + (dx / 2), y + (dy /2))).isOccupied() ){
+            if (dy == getForwardDirection() * 2 && !destination.isOccupied() && !board.getTile(Board.getLocationFromCords(x + (dx / 2), y + (dy /2))).isOccupied() && (isOnStartingSquare(y)) ){
                 return (Moves.allClear(color, destination));
             }
         }
