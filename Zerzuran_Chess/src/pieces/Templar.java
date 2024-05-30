@@ -5,11 +5,11 @@ import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 
-public class Paladin extends Piece {
-    public Paladin(int color) {
+public class Templar extends Piece {
+    public Templar(int color) {
         super(color);
         value = 7;
-        name = "Paladin";
+        name = "Templar";
     }
 
     @Override

@@ -84,7 +84,7 @@ public class Tile extends JPanel {
         }else if ( (getPiece() instanceof Crusader && (((Board.getYFromLocation(getLocationOnBoard()) == 0) && (( getPiece()).getForwardDirection() == -1)) || ((Board.getYFromLocation(getLocationOnBoard()) == 7) && (( getPiece()).getForwardDirection() == 1))))){
             int col = getPiece().color;
             AudioPlayer.play("src/resources/audio/promote.wav");
-            setPiece(new Paladin(col));
+            setPiece(new Templar(col));
         }
         revalidate();
         repaint();
@@ -305,8 +305,8 @@ public class Tile extends JPanel {
         possibilities.add("Berserker");
         possibilities.add("Berserker");
 
-        possibilities.add("Paladin");
-        possibilities.add("Paladin");
+        possibilities.add("Templar");
+        possibilities.add("Templar");
 
         possibilities.add("King");
         possibilities.add("Amazon");
@@ -448,8 +448,8 @@ public class Tile extends JPanel {
                 setPiece(new Keegan(piece.getColor()));
             } else if (s == "Empress") {
                 setPiece(new Empress(piece.getColor()));
-            } else if (s == "Paladin") {
-                setPiece(new Paladin(piece.getColor()));
+            } else if (s == "Templar") {
+                setPiece(new Templar(piece.getColor()));
             }
 
             if (roy && getPiece() != null){

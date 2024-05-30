@@ -14,8 +14,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class ChessGame extends JFrame implements MouseListener, MouseMotionListener {
@@ -1309,7 +1307,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Archer");//
         possibilities.add("Buffalo");//
         possibilities.add("Crusader");//
-        possibilities.add("Paladin");//
+        possibilities.add("Templar");//
         possibilities.add("Quetzacoatl");//
         possibilities.add("Viking");//
         possibilities.add("Wolf");//
@@ -1361,8 +1359,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new Buffalo(c));
             } else if (Objects.equals(s, "Crusader")) {
                 tile.setPiece(new Crusader(c));
-            } else if (Objects.equals(s, "Paladin")) {
-                tile.setPiece(new Paladin(c));
+            } else if (Objects.equals(s, "Templar")) {
+                tile.setPiece(new Templar(c));
             } else if (Objects.equals(s, "Quetzacoatl")) {
                 tile.setPiece(new Quetzacoatl(c));
             } else if (Objects.equals(s, "Viking")) {
