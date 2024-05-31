@@ -259,6 +259,14 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     Piece i = start.getPiece();
                     start.setPiece(move.end.getPiece());
                     move.end.setPiece(i);
+                }else if (start.getPiece() instanceof King && move.end.getPiece() != null && (start.getPiece().color == move.end.getPiece().color)){
+                    Piece i = start.getPiece();
+                    start.setPiece(move.end.getPiece());
+                    move.end.setPiece(i);
+                //}else if (start.getPiece() instanceof Swapper && move.end.getPiece() != null && (move.end.getPiece() instanceof Pawn || (start.getPiece().color == move.end.getPiece().color))){
+                //    Piece i = start.getPiece();
+                //    start.setPiece(move.end.getPiece());
+                //    move.end.setPiece(i);
                 }else{
                     move.end.setPiece(start.getPiece());
                     start.setPiece(null);
