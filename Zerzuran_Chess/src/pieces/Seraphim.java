@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Seraphim extends Bladedancer {
     public Seraphim(int color) {
         super(color);
-        value = 10;
+        value = 15;
         name = "Seraphim";
         wall = true;
     }
