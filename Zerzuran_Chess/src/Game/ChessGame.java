@@ -4,6 +4,7 @@ import Zerzuran_Chess.src.pieces.*;
 import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
 import Zerzuran_Chess.src.pieces.Assassins.Assassin;
 import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
+import Zerzuran_Chess.src.pieces.Assassins.Swapper;
 import Zerzuran_Chess.src.pieces.Unique.CheckerButNot;
 import Zerzuran_Chess.src.pieces.Unique.StepPawn;
 import Zerzuran_Chess.src.pieces.Unique.shortRook;
@@ -195,71 +196,80 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         Tile start = move.start;
         boolean resp = (move.end.getPiece() != null && re);
         if (start != null && (start.isPlayableMove(location, chessBoard, true) != 0)) {
-            if ((move.end.getPiece() != null) && (move.end.getPiece() instanceof Militia)){ // when militias die, the player controling them loses radness
-                if (move.end.getPiece().getColor() == 0){
+            if ((move.end.getPiece() != null) && (move.end.getPiece() instanceof Militia)) { // when militias die, the player controling them loses radness
+                if (move.end.getPiece().getColor() == 0) {
                     Board.bRadness /= 2;
-                }else if (move.end.getPiece().getColor() == 1){
+                } else if (move.end.getPiece().getColor() == 1) {
                     Board.wRadness /= 2;
                 }
             }
-            if ((move.end.getPiece() != null && move.end.getPiece() instanceof Tyrant)){ //Killing a tyrant is a huge propaganda victory
-                if (start.getPiece().getColor() == 0){
+            if ((move.end.getPiece() != null && move.end.getPiece() instanceof Tyrant)) { //Killing a tyrant is a huge propaganda victory
+                if (start.getPiece().getColor() == 0) {
                     Board.bRadness += 3;
                     Board.wRadness -= 3;
-                }else if (start.getPiece().getColor() == 1){
+                } else if (start.getPiece().getColor() == 1) {
                     Board.wRadness += 3;
                     Board.bRadness -= 3;
                 }
             }
-            if (start.getPiece() instanceof AugmentedKnight){ //gain augments
+            if (start.getPiece() instanceof AugmentedKnight) { //gain augments
                 ((AugmentedKnight) start.getPiece()).justMoved(Board.getYFromLocation(move.end.getLocationOnBoard()), start);
             }
             //process move
             tLocked = false;
-            if ((chessBoard.getTile(location).getPiece() != null) && (atomic > 0)){
+            if ((chessBoard.getTile(location).getPiece() != null) && (atomic > 0)) {
                 boolean ks = false;
                 boolean ps = false;
-                if ((atomic - 1) / 2 == 0){
+                if ((atomic - 1) / 2 == 0) {
                     ks = true;
                 }
-                if (atomic % 2 == 1){
+                if (atomic % 2 == 1) {
                     ps = true;
                 }
                 nuke(location, ks, ps);
-                if (ranged == 0  && !(start.getPiece() != null && (start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage) && move.end.getPiece() != null)){
+                if (ranged == 0 && !(start.getPiece() != null && (start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage) && move.end.getPiece() != null)) {
                     obliterate(start.getLocationOnBoard(), ks, ps);
                 }
 
-            } else if ((chessBoard.getTile(location).getPiece() != null) && (chessBoard.getTile(location).getPiece().bomb) ) {
+            } else if ((chessBoard.getTile(location).getPiece() != null) && (chessBoard.getTile(location).getPiece().bomb)) {
                 nuke(location, false, true);
-                if (ranged == 0  && !(start.getPiece() != null && (start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage) && move.end.getPiece() != null)){
+                if (ranged == 0 && !(start.getPiece() != null && (start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage) && move.end.getPiece() != null)) {
                     obliterate(start.getLocationOnBoard(), false, true);
                 }
             }
 
-            if (bStab && start.getPiece() != null){
-                if (location >= 8){
+            if (bStab && start.getPiece() != null) {
+                if (location >= 8) {
                     Tile t = chessBoard.getTile(location - 8);
-                    if (t.getPiece() != null && t.getPiece().getColor() != start.getPiece().getColor() && t.getPiece().getForwardDirection() == -1){
+                    if (t.getPiece() != null && t.getPiece().getColor() != start.getPiece().getColor() && t.getPiece().getForwardDirection() == -1) {
                         obliterate(location - 8, false, true);
                     }
-                }if (location < 56){
+                }
+                if (location < 56) {
                     Tile t = chessBoard.getTile(location + 8);
-                    if (t.getPiece() != null && t.getPiece().getColor() != start.getPiece().getColor() && t.getPiece().getForwardDirection() == 1){
+                    if (t.getPiece() != null && t.getPiece().getColor() != start.getPiece().getColor() && t.getPiece().getForwardDirection() == 1) {
                         obliterate(location + 8, false, true);
                     }
                 }
             }
 
-            if (((ranged == 0 && !(start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage)) || (move.end.getPiece() == null))){
-                move.end.setPiece(start.getPiece());
-                start.setPiece(null);
-                if (bTrayal && move.end.getPiece() != null && !move.end.getPiece().royal && (int) (Math.random() * 5) == 1){
-                    move.end.getPiece().color = (move.end.getPiece().color + 1) % 2;
-                    move.end.getPiece().setForwardDirection(move.end.getPiece().getForwardDirection() * -1);
-                    move.end.setPiece(move.end.getPiece());
+            if (((ranged == 0 && !(start.getPiece() instanceof Mage || start.getPiece() instanceof Archmage)) || (move.end.getPiece() == null))) {
+
+                if (start.getPiece() instanceof Swapper && move.end.getPiece() != null && (move.end.getPiece() instanceof Pawn || (start.getPiece().color == move.end.getPiece().color))){
+                    Piece i = start.getPiece();
+                    start.setPiece(move.end.getPiece());
+                    move.end.setPiece(i);
+                }else{
+                    move.end.setPiece(start.getPiece());
+                    start.setPiece(null);
+                    if (bTrayal && move.end.getPiece() != null && !move.end.getPiece().royal && (int) (Math.random() * 5) == 1) {
+                        move.end.getPiece().color = (move.end.getPiece().color + 1) % 2;
+                        move.end.getPiece().setForwardDirection(move.end.getPiece().getForwardDirection() * -1);
+                        move.end.setPiece(move.end.getPiece());
+                    }
                 }
-            } else {
+
+            }else {
                 move.end.setPiece(null);
             }
 
@@ -1302,6 +1312,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Assassin1");//
         possibilities.add("Assassin2");//
         possibilities.add("Assassin3");//
+        possibilities.add("Assassin4");//
         possibilities.add("Manticore");//
         possibilities.add("Greatwyrm");//
         possibilities.add("Mage");//
@@ -1445,6 +1456,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new Bladedancer(c));
             } else if (Objects.equals(s, "Assassin3")) {
                 tile.setPiece(new Action_Man(c));
+            } else if (Objects.equals(s, "Assassin4")) {
+                tile.setPiece(new Swapper(c));
             } else if (Objects.equals(s, "Spider")) {
                 tile.setPiece(new Spider(c));
             } else if (Objects.equals(s, "Manticore")) {
