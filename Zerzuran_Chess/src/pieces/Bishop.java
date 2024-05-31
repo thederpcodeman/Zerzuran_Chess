@@ -15,9 +15,9 @@ public class Bishop extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bBishop.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bBishop.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wBishop.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wBishop.png"));
         } else {
             return null;
         }

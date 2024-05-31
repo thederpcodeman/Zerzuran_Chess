@@ -17,10 +17,10 @@ public class Spearman extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bSpear.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bSpear.png"));
 
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wSpear.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wSpear.png"));
         } else {
             return null;
         }

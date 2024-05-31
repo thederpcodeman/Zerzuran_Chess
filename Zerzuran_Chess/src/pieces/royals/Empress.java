@@ -18,9 +18,9 @@ public class Empress extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bEmpress.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bEmpress.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wEmpress.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wEmpress.png"));
         } else {
             return null;
         }

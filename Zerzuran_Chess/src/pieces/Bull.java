@@ -15,9 +15,9 @@ public class Bull extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bBull.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bBull.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wBull.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wBull.png"));
         } else {
             return null;
         }

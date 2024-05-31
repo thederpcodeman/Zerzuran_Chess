@@ -17,9 +17,9 @@ public class Wolf extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bWolf.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bWolf.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wWolf.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wWolf.png"));
         } else {
             return null;
         }

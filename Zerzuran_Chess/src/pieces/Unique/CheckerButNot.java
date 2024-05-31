@@ -17,16 +17,16 @@ public class CheckerButNot extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (royal){
-                return(new ImageIcon("src/resources/bupChecker.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupChecker.png"));
             }else{
-                return(new ImageIcon("src/resources/bChecker.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bChecker.png"));
             }
 
         } else if(color == 1) {
             if (royal){
-                return(new ImageIcon("src/resources/wupChecker.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupChecker.png"));
             }else{
-                return(new ImageIcon("src/resources/wChecker.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wChecker.png"));
             }
         } else {
             return null;

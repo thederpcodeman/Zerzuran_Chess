@@ -20,9 +20,9 @@ public class General extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bGeneral.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bGeneral.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wGeneral.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wGeneral.png"));
         } else {
             return null;
         }

@@ -14,9 +14,9 @@ public class shortRook extends Rook {
     }
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bSRook.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bSRook.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wSRook.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wSRook.png"));
         } else {
             return null;
         }

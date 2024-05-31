@@ -17,9 +17,9 @@ public class Archmage extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bArchmage.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bArchmage.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wArchmage.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wArchmage.png"));
         } else {
             return null;
         }

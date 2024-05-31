@@ -14,9 +14,9 @@ public class Seraphim extends Bladedancer {
     }
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bSera.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bSera.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wSera.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wSera.png"));
         } else {
             return null;
         }

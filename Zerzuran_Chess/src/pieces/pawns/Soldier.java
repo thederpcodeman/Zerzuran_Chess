@@ -15,16 +15,16 @@ public class Soldier extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bSoldier.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bSoldier.png"));
             }else{
-                return(new ImageIcon("src/resources/bupSoldier.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupSoldier.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/wSoldier.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wSoldier.png"));
             }else{
-                return(new ImageIcon("src/resources/wupSoldier.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupSoldier.png"));
             }
         } else {
             return null;

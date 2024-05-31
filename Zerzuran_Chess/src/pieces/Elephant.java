@@ -15,9 +15,9 @@ public class Elephant extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bElephant.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bElephant.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wElephant.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wElephant.png"));
         } else {
             return null;
         }

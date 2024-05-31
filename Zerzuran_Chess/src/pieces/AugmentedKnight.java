@@ -38,9 +38,9 @@ public class AugmentedKnight extends Piece {
 
         ImageIcon small;
         if(color == 0) {
-            large = (new ImageIcon("src/resources/AugKnight/bAugKnight.png"));
+            large = (new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/bAugKnight.png"));
         } else {
-            large = (new ImageIcon("src/resources/AugKnight/wAugKnight.png"));
+            large = (new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/wAugKnight.png"));
         }
 
 
@@ -56,67 +56,67 @@ public class AugmentedKnight extends Piece {
         ImageIcon extraLayers;
 
         if (augment2 == 13){
-            extraLayers = new ImageIcon("src/resources/AugKnight/AugmentsQueen.png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/AugmentsQueen.png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 8 || augment2 == 8){
-            extraLayers = new ImageIcon("src/resources/AugKnight/AugmentsBishop.png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/AugmentsBishop.png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 9 || augment2 == 9){
-            extraLayers = new ImageIcon("src/resources/AugKnight/AugmentsRook.png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/AugmentsRook.png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (!(augment == 5 || augment2 == 5 || augment == 6 || augment2 == 6 || augment == 7 || augment2 == 8 || augment == 8 || augment2 == 9 || augment == 9 || augment2 == 13)){
             if (augment == 10 || augment2 == 10){
-                extraLayers = new ImageIcon("src/resources/AugKnight/AugmentsPsus.png");
+                extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/AugmentsPsus.png");
                 g.drawImage(extraLayers.getImage(), 0, 0, null);
             }else {
-                extraLayers = new ImageIcon("src/resources/AugKnight/Augments[2,1].png");
+                extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[2,1].png");
                 g.drawImage(extraLayers.getImage(), 0, 0, null);
             }
         }
 
         if (augment == 0 || augment2 == 0 || augment == 5 || augment2 == 5){
-                extraLayers = new ImageIcon("src/resources/AugKnight/Augments[1,0].png");
+                extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[1,0].png");
                 g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 1 || augment2 == 1 || augment == 6 || augment2 == 6){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[2,0].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[2,0].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 2 || augment2 == 2 || augment == 5 || augment2 == 5){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[1,1].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[1,1].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 3 || augment2 == 3 || augment == 6 || augment2 == 6){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[2,2].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[2,2].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 4 || augment2 == 4){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[3,0].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[3,0].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment == 7 || augment2 == 7){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[3,1].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[3,1].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment2 == 11){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[3,2].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[3,2].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 
         if (augment2 == 12){
-            extraLayers = new ImageIcon("src/resources/AugKnight/Augments[4,3].png");
+            extraLayers = new ImageIcon("Zerzuran_Chess/src/resources/AugKnight/Augments[4,3].png");
             g.drawImage(extraLayers.getImage(), 0, 0, null);
         }
 

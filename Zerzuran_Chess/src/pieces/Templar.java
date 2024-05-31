@@ -15,9 +15,9 @@ public class Templar extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bPaladin.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bPaladin.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wPaladin.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wPaladin.png"));
         } else {
             return null;
         }

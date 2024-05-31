@@ -20,9 +20,9 @@ public class Bladedancer extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bAssassin.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bAssassin.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wAssassin.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wAssassin.png"));
         } else {
             return null;
         }

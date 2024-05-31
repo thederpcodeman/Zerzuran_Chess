@@ -18,9 +18,9 @@ public class Theocrat extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bTheo.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bTheo.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wTheo.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wTheo.png"));
         } else {
             return null;
         }

@@ -15,16 +15,16 @@ public class Wall extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bWall.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bWall.png"));
             }else{
-                return(new ImageIcon("src/resources/bupWall.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupWall.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/Wall.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Wall.png"));
             }else{
-                return(new ImageIcon("src/resources/upWall.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/upWall.png"));
             }
         } else {
             return null;

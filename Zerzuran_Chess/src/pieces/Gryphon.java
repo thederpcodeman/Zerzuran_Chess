@@ -15,9 +15,9 @@ public class Gryphon extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bGryphon.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bGryphon.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wGryphon.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wGryphon.png"));
         } else {
             return null;
         }

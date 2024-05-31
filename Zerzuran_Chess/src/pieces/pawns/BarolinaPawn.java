@@ -19,16 +19,16 @@ public class BarolinaPawn extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bBPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bBPawn.png"));
             }else{
-                return(new ImageIcon("src/resources/bupBPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupBPawn.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/wBPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wBPawn.png"));
             }else{
-                return(new ImageIcon("src/resources/wupBPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupBPawn.png"));
             }
         } else {
             return null;

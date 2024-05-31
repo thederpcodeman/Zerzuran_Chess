@@ -18,16 +18,16 @@ public class StepPawn extends Prince {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bPawn.png"));
             }else{
-                return(new ImageIcon("src/resources/bupPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupPawn.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/wPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wPawn.png"));
             }else{
-                return(new ImageIcon("src/resources/wupPawn.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupPawn.png"));
             }
         } else {
             return null;

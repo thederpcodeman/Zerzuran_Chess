@@ -15,9 +15,9 @@ public class Lion extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bLion.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bLion.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wLion.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wLion.png"));
         } else {
             return null;
         }

@@ -18,9 +18,9 @@ public class Flag extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bFlags.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bFlags.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wFlag.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wFlag.png"));
         } else {
             return null;
         }

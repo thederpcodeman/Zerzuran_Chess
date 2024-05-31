@@ -15,9 +15,9 @@ public class Boat extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bBoat.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bBoat.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wBoat.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wBoat.png"));
         } else {
             return null;
         }

@@ -15,9 +15,9 @@ public class Frog extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bFrog.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bFrog.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wFrog.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wFrog.png"));
         } else {
             return null;
         }

@@ -18,9 +18,9 @@ public class King extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bKing.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bKing.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wKing.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wKing.png"));
         } else {
             return null;
         }

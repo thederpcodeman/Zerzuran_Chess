@@ -16,9 +16,9 @@ public class Chancellor extends Piece{
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bChancellor.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bChancellor.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wChancellor.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wChancellor.png"));
         } else {
             return null;
         }

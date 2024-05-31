@@ -15,9 +15,9 @@ public class Greatwyrm extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bGreatwyrm.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bGreatwyrm.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wGreatwyrm.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wGreatwyrm.png"));
         } else {
             return null;
         }

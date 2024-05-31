@@ -16,16 +16,16 @@ public class Militia extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bPrince.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bPrince.png"));
             }else{
-                return(new ImageIcon("src/resources/bupPrince.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupPrince.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/wPrince.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wPrince.png"));
             }else{
-                return(new ImageIcon("src/resources/wupPrince.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupPrince.png"));
             }
         } else {
             return null;

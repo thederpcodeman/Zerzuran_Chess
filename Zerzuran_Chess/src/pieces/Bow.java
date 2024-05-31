@@ -15,9 +15,9 @@ public class Bow extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bBow.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bBow.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wBow.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wBow.png"));
         } else {
             return null;
         }

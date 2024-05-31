@@ -17,9 +17,9 @@ public class Immortal extends Piece{
         @Override
         public ImageIcon getImageIcon() {
             if(color == 0) {
-                return(new ImageIcon("src/resources/bImm.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bImm.png"));
             } else if(color == 1) {
-                return(new ImageIcon("src/resources/wImm.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wImm.png"));
             } else {
                 return null;
             }

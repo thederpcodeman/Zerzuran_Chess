@@ -15,9 +15,9 @@ public class Manticore extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bWyvern.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bWyvern.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wWyvern.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wWyvern.png"));
         } else {
             return null;
         }

@@ -19,9 +19,9 @@ public class Keegan extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bKeegan.PNG"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bKeegan.PNG"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wKeegan.PNG"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wKeegan.PNG"));
         } else {
             return null;
         }

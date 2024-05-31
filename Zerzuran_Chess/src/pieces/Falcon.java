@@ -15,9 +15,9 @@ public class Falcon extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bfalcon.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bfalcon.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wfalcon.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wfalcon.png"));
         } else {
             return null;
         }

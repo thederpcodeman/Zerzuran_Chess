@@ -15,9 +15,9 @@ public class Knight extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bKnight.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bKnight.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wKnight.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wKnight.png"));
         } else {
             return null;
         }

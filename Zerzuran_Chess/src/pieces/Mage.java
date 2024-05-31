@@ -18,43 +18,43 @@ public class Mage extends Piece {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (mana < 2){
-                return(new ImageIcon("src/resources/Mage/bMage.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage.png"));
             } else if (mana == 2) {
-                return(new ImageIcon("src/resources/Mage/bMage1star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage1star.png"));
             } else if (mana == 3) {
-                return(new ImageIcon("src/resources/Mage/bMage2star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage2star.png"));
             } else if (mana == 4) {
-                return(new ImageIcon("src/resources/Mage/bMage3star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage3star.png"));
             } else if (mana == 5) {
-                return(new ImageIcon("src/resources/Mage/bMage4star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage4star.png"));
             } else if (mana == 6) {
-                return(new ImageIcon("src/resources/Mage/bMage5star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage5star.png"));
             } else if (mana == 7) {
-                return(new ImageIcon("src/resources/Mage/bMage6star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage6star.png"));
             } else if (mana == 8) {
-                return(new ImageIcon("src/resources/Mage/bMage7star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage7star.png"));
             } else if (mana >= 9) {
-                return(new ImageIcon("src/resources/Mage/bMage8star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/bMage8star.png"));
             }
         } else if(color == 1) {
             if (mana < 2){
-                return(new ImageIcon("src/resources/Mage/wMage.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage.png"));
             } else if (mana == 2) {
-                return(new ImageIcon("src/resources/Mage/wMage1star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage1star.png"));
             } else if (mana == 3) {
-                return(new ImageIcon("src/resources/Mage/wMage2star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage2star.png"));
             } else if (mana == 4) {
-                return(new ImageIcon("src/resources/Mage/wMage3star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage3star.png"));
             } else if (mana == 5) {
-                return(new ImageIcon("src/resources/Mage/wMage4star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage4star.png"));
             } else if (mana == 6) {
-                return(new ImageIcon("src/resources/Mage/wMage5star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage5star.png"));
             } else if (mana == 7) {
-                return(new ImageIcon("src/resources/Mage/wMage6star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage6star.png"));
             } else if (mana == 8) {
-                return(new ImageIcon("src/resources/Mage/wMage7star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage7star.png"));
             } else if (mana >= 9) {
-                return(new ImageIcon("src/resources/Mage/wMage8star.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/Mage/wMage8star.png"));
             }
         }
         return null;

@@ -15,9 +15,9 @@ public class Camel extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bCamel.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bCamel.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wCamel.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wCamel.png"));
         } else {
             return null;
         }

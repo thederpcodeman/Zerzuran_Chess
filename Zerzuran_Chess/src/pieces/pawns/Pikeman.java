@@ -18,16 +18,16 @@ public class Pikeman extends Pawn {
     public ImageIcon getImageIcon() {
         if(color == 0) {
             if (getForwardDirection() == 1){
-                return(new ImageIcon("src/resources/bPikeman.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bPikeman.png"));
             }else{
-                return(new ImageIcon("src/resources/bupPikeman.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/bupPikeman.png"));
             }
 
         } else if(color == 1) {
             if (getForwardDirection() == -1){
-                return(new ImageIcon("src/resources/wPikeman.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wPikeman.png"));
             }else{
-                return(new ImageIcon("src/resources/wupPikeman.png"));
+                return(new ImageIcon("Zerzuran_Chess/src/resources/wupPikeman.png"));
             }
         } else {
             return null;

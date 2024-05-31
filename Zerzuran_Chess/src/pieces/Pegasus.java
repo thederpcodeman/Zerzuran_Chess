@@ -15,9 +15,9 @@ public class Pegasus extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("src/resources/bPsus.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bPsus.png"));
         } else if(color == 1) {
-            return(new ImageIcon("src/resources/wPsus.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wPsus.png"));
         } else {
             return null;
         }
