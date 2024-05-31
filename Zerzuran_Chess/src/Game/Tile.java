@@ -62,9 +62,9 @@ public class Tile extends JPanel {
             ImageIcon imageIcon = null;
             if (ChessGame.myst){
                 if (getPiece().color == 1){
-                    imageIcon = new ImageIcon(new ImageIcon("src/resources/wUnknown.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
+                    imageIcon = new ImageIcon(new ImageIcon("Zerzuran_Chess/src/resources/wUnknown.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
                 }else if (getPiece().color == 0){
-                    imageIcon = new ImageIcon(new ImageIcon("src/resources/bUnknown.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
+                    imageIcon = new ImageIcon(new ImageIcon("Zerzuran_Chess/src/resources/bUnknown.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
                 }
             }else if (ChessGame.skatter){
                 imageIcon = Skatterer.rimage(getPiece().getColor(), size);
@@ -83,11 +83,11 @@ public class Tile extends JPanel {
             return;
         }else if ( (getPiece() instanceof Crusader && (((Board.getYFromLocation(getLocationOnBoard()) == 0) && (( getPiece()).getForwardDirection() == -1)) || ((Board.getYFromLocation(getLocationOnBoard()) == 7) && (( getPiece()).getForwardDirection() == 1))))){
             int col = getPiece().color;
-            AudioPlayer.play("src/resources/audio/promote.wav");
+            AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
             setPiece(new Templar(col));
         }else if ( (getPiece() instanceof Boat && (((Board.getYFromLocation(getLocationOnBoard()) == 0) && (( getPiece()).getForwardDirection() == -1)) || ((Board.getYFromLocation(getLocationOnBoard()) == 7) && (( getPiece()).getForwardDirection() == 1))))){
             int col = getPiece().color;
-            AudioPlayer.play("src/resources/audio/promote.wav");
+            AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
             setPiece(new Gryphon(col));
         }
         revalidate();
@@ -105,7 +105,7 @@ public class Tile extends JPanel {
         {
             ImageIcon imageIcon = new ImageIcon(piece.getImageIcon().getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
             if (ChessGame.myst){
-                imageIcon = new ImageIcon(new ImageIcon("src/resources/bAmazon.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
+                imageIcon = new ImageIcon(new ImageIcon("Zerzuran_Chess/src/resources/bAmazon.png").getImage().getScaledInstance(size * 7 / 8, size * 7 / 8, Image.SCALE_DEFAULT));
             }
             JLabel image = new JLabel(imageIcon);
             add(image);
@@ -213,7 +213,7 @@ public class Tile extends JPanel {
     public void promPawn() {
         int input;
 
-        AudioPlayer.play("src/resources/audio/promote.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
 
         if (getPiece() instanceof Checker){
             getPiece().royal = true;

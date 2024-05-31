@@ -13,7 +13,7 @@ public class Main {
 
         JFrame frame = new ChessGame(height-200);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wKnight.png"));
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
         frame.pack();
         frame.setTitle("Zerzuran Chess");
         frame.setResizable(false);

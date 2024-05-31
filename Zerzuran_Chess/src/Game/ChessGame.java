@@ -180,7 +180,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             i.setBackground(i.getColor());
         }
 
-        AudioPlayer.play("src/resources/audio/startgame.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/startgame.wav");
 
         Setup.refresh(chessBoard);
         turn = 1;
@@ -286,7 +286,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
 
 
-            AudioPlayer.play("src/resources/audio/move-self.wav");
+            AudioPlayer.play("Zerzuran_Chess/src/resources/audio/move-self.wav");
             if (turn == 1){
                 if (wBonusTurns > 0){
                     recheck = false;
@@ -458,7 +458,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         }else{
             if (tile.getPiece() == null){
                 setTitle("Chesscapades");
-                setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wKnight.png"));
+                setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
             }else{
                 String newname;
                 if (myst) {
@@ -467,13 +467,13 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                         newname += " [Royal]";
                     }
                     if (tile.getPiece().color == 1) {
-                        setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wUnknown.png"));
+                        setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wUnknown.png"));
                     } else {
-                        setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/bUnknown.png"));
+                        setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/bUnknown.png"));
                     }
                 }else if (skatter){
                     newname = "Zerzuran Chess";
-                    setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wKnight.png"));
+                    setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
                 }else{
                     newname = tile.getPiece().name;
                     setIconImage(tile.getPiece().getImageIcon().getImage());
@@ -600,7 +600,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
     }
 
     void checkmate(int win) {
-        AudioPlayer.play("src/resources/audio/win.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/win.wav");
         System.out.println("Checkmate! Here's the FEN for the final position!");
         System.out.println(fens.get(fens.size() - 1));
         int option;
@@ -622,7 +622,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
     }
 
     void stalemate() {
-        AudioPlayer.play("src/resources/audio/stalemate.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/stalemate.wav");
         System.out.println("Stalemate! Here's the FEN for the final position!");
         System.out.println(fens.get(fens.size() - 1));
         int option;
@@ -695,7 +695,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         @Override
         public void actionPerformed(ActionEvent e) {
             int input;
-            AudioPlayer.play("src/resources/audio/promote.wav");
+            AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
             ArrayList<String> possibilities = new ArrayList<String>();
 
             possibilities.add("Simple Reset");
@@ -1013,7 +1013,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                         }
                     }
 
-                    AudioPlayer.play("src/resources/audio/promote.wav");
+                    AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
 
                     final String showToUser = info.toString();
 
@@ -1032,7 +1032,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                             JLabel lbl = new JLabel(showToUser);
                             lbl.setVisible(true);
                             panel.add(lbl);
-                            frame.setIconImage(Toolkit.getDefaultToolkit().getImage("src/resources/wKnight.png"));
+                            frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
                         }
                     } );
 
@@ -1218,7 +1218,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         public void actionPerformed(ActionEvent e) {
             int input;
 
-            AudioPlayer.play("src/resources/audio/promote.wav");
+            AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
             ArrayList<String> possibilities = new ArrayList<String>();
 
             possibilities.add("Rebecca"); // 0
@@ -1286,7 +1286,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
     public void debugClick(Tile tile){
         int input;
 
-        AudioPlayer.play("src/resources/audio/promote.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
         ArrayList<String> possibilities = new ArrayList<String>();
 
         possibilities.add("Queen");//
