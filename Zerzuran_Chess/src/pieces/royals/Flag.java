@@ -20,7 +20,7 @@ public class Flag extends Piece {
         if(color == 0) {
             return(new ImageIcon("Zerzuran_Chess/src/resources/bFlags.png"));
         } else if(color == 1) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/wFlag.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wFlag.jpg"));
         } else {
             return null;
         }
