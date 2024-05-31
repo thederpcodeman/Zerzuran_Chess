@@ -359,7 +359,7 @@ public class AugmentedKnight extends Piece {
         }
         int input;
 
-        AudioPlayer.play("src/resources/audio/promote.wav");
+        AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
         ArrayList<String> possibilities = new ArrayList<String>();
 
         possibilities.add("yes");
