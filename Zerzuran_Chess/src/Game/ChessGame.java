@@ -623,7 +623,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
     void stalemate() {
         AudioPlayer.play("Zerzuran_Chess/src/resources/audio/stalemate.wav");
-        System.out.println("Stalemate! Destroying a random piece.");
+        System.out.println("Stalemate! Enabling countermeasures");
+        decay = true;
         Tile[] i = chessBoard.getOccupiedTiles();
         i[(int) (Math.random() * i.length)].setPiece(null);
     }
