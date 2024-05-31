@@ -233,9 +233,9 @@ public class Tile extends JPanel {
         possibilities.add("Turn around");
         possibilities.add("Turn around");
 
-        possibilities.add("No thank you.");
-        possibilities.add("No thank you.");
-        possibilities.add("No thank you.");
+        possibilities.add("No thank you");
+        possibilities.add("No thank you");
+        possibilities.add("No thank you");
 
         possibilities.add("Queen");
         possibilities.add("Queen");
@@ -352,7 +352,7 @@ public class Tile extends JPanel {
                 possibilities.add(bonusOptions.get(1));
                 possibilities.add(bonusOptions.get(2));
                 possibilities.add(bonusOptions.get(3));
-                int bad = possibilities.indexOf("No thank you.");
+                int bad = possibilities.indexOf("No thank you");
                 if (bad == -1){
                     bad = possibilities.indexOf("Turn around");
                 }
@@ -368,8 +368,8 @@ public class Tile extends JPanel {
             for (int i = 0; i < o; i++){
                 possibilities.add("Turn around");
                 possibilities.add("Turn around");
-                possibilities.add("No thank you.");
-                possibilities.add("No thank you.");
+                possibilities.add("No thank you");
+                possibilities.add("No thank you");
             }
             Collections.shuffle(possibilities);
             o = 3;
@@ -429,7 +429,7 @@ public class Tile extends JPanel {
                 setPiece(new Bull(piece.getColor()));
             } else if (s == "Gryphon") {
                 setPiece(new Gryphon(piece.getColor()));
-            } else if (s == "No thank you.") {
+            } else if (s == "No thank you") {
                 if (getPiece().getColor() == 1){
                     Board.wRadness += 3;
                 }else if (getPiece().getColor() == 0){
