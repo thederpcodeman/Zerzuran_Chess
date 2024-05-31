@@ -101,6 +101,11 @@ public class Setup {
                 }
             }
         }
+        if ((int) (Math.random() * 30) == 1){
+            for (Tile i : chessBoard.getOccupiedTiles()){
+                i.getPiece().wall = true;
+            }
+        }
     }
 
     public static void chess(Board chessBoard){
