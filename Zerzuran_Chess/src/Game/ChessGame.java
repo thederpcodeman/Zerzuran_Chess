@@ -623,20 +623,9 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
     void stalemate() {
         AudioPlayer.play("Zerzuran_Chess/src/resources/audio/stalemate.wav");
-        System.out.println("Stalemate! Here's the FEN for the final position!");
-        System.out.println(fens.get(fens.size() - 1));
-        int option;
-        String buttons[] = {"Replay", "Quit"};
-        option = JOptionPane.showOptionDialog(null, "Stalemate! Play again or quit?", "Stalemate", JOptionPane.NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, buttons, "default");
-        if (option == 0) {
-            for (int i = 0; i < 64; i++) {
-                chessBoard.getTile(i).setPiece(null);
-            }
-            fens.clear();
-            setupPieces();
-        } else {
-            System.exit(0);
-        }
+        System.out.println("Stalemate! Destroying a random piece.");
+        Tile[] i = chessBoard.getOccupiedTiles();
+        i[(int) (Math.random() * i.length)].setPiece(null);
     }
 
     @Override
