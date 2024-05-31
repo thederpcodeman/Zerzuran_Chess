@@ -4,6 +4,7 @@ import Zerzuran_Chess.src.pieces.*;
 import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
 import Zerzuran_Chess.src.pieces.Assassins.Assassin;
 import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
+import Zerzuran_Chess.src.pieces.Assassins.Swapper;
 import Zerzuran_Chess.src.pieces.pawns.Checker;
 import Zerzuran_Chess.src.pieces.pawns.Pawn;
 import Zerzuran_Chess.src.pieces.pawns.Prince;
@@ -437,19 +438,23 @@ public class Tile extends JPanel {
                 }
                 setPiece(null);
             } else if (s == "Ship") {
-                setPiece(new Boat(piece.getColor()));
+                Piece spin = new Boat(piece.getColor());
+                spin.setForwardDirection(getPiece().getForwardDirection() * -1);
+                setPiece(spin);
             } else if (s == "Pegasus rider") {
                 setPiece(new Pegasus(piece.getColor()));
             } else if (s == "Tyrant") {
                 setPiece(new Tyrant(piece.getColor()));
             } else if (s == "Assassin") {
-                int ran = (int) (Math.random() * 3);
+                int ran = (int) (Math.random() * 4);
                 if (ran == 0){
                     setPiece(new Assassin(piece.getColor()));
                 }else if (ran == 1){
                     setPiece(new Bladedancer(piece.getColor()));
                 }else if (ran == 2){
                     setPiece(new Action_Man(piece.getColor()));
+                }else if (ran == 3){
+                    setPiece(new Swapper(piece.getColor()));
                 }
             } else if (s == "Spider") {
                 setPiece(new Spider(piece.getColor()));

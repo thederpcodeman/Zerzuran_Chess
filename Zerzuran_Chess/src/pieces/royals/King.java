@@ -3,6 +3,7 @@ package Zerzuran_Chess.src.pieces.royals;
 import Zerzuran_Chess.src.Game.Board;
 import Zerzuran_Chess.src.Game.Tile;
 import Zerzuran_Chess.src.pieces.*;
+import Zerzuran_Chess.src.pieces.pawns.Pawn;
 
 import javax.swing.*;
 
@@ -29,49 +30,20 @@ public class King extends Piece {
     @Override
     public boolean isLegalMove(int x, int y, int newX, int newY, Board board, boolean forReal) {
         Tile destinationTile = board.getTile(board.getLocationFromCords(newX, newY));
-        if (!Moves.allClear(getColor(), destinationTile)){
-            return false;
-        }
+
         int dx = Math.abs(newX - x);
         int dy = Math.abs(newY - y);
         if(dx <= 1 && dy <= 1)
         {
-            return true;
+            return (Moves.allClear(getColor(), destinationTile));
         }
-            if (newY == y && x == 4) {
-                int direction;
-                Tile tile;
-                if (newX == 2)
-                {
-                    direction = -1;
-                    tile = board.getTile(Board.getLocationFromCords(0, y));
-                    Tile extraTile = board.getTile(Board.getLocationFromCords(1, y));
-                    if(extraTile.getPiece() != null)
-                    {
-                        return false;
-                    }
+        if ((Math.abs(dx) == 2 && dy == 0) || (Math.abs(dx) == 3 && dy == 0) || (Math.abs(dy) == 2 && dx == 0) || (Math.abs(dy) == 3 && dx == 0)){
+            if (destinationTile.getPiece() != null){
+                if (destinationTile.getPiece().getColor() == color && !(destinationTile.getPiece() instanceof Pawn)){
+                    return Moves.rookMove(x, y, dx, dy, board);
                 }
-                else if (newX == 6)
-                {
-                    direction = 1;
-                    tile = board.getTile(Board.getLocationFromCords(7, y));
-                }
-                else
-                {
-                    return false;
-                }
-                int newRookDestination = Board.getLocationFromCords(newX - direction, newY);
-                Tile newRookTile = board.getTile(newRookDestination);
-                    if (!isInCheck(board) && tile.getPiece() != null && (tile.getPiece() instanceof Rook || tile.getPiece() instanceof Queen || tile.getPiece() instanceof Chancellor || tile.getPiece() instanceof Amazon ))
-                    {
-                        if(forReal)
-                        {
-                            newRookTile.setPiece(tile.getPiece());
-                            tile.setPiece(null);
-                        }
-                        return true;
-                    }
             }
+        }
         return false;
     }
 

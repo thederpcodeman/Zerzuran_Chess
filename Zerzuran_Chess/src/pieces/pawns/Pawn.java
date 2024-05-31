@@ -9,7 +9,6 @@ import Zerzuran_Chess.src.pieces.Piece;
 import javax.swing.*;
 
 public class Pawn extends Piece {
-    private int forwards;
     public Pawn(int color) {
         super(color);
         value = 1;
