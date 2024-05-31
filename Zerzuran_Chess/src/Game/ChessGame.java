@@ -337,7 +337,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
             if (decay){
                 cooldown += 1;
-                if (cooldown == 5){
+                if (cooldown >= 5){
                     cooldown = 0;
                     Tile[] wh = chessBoard.getOccupiedTilesOfColor(1);
                     Tile sel = wh[((int) (Math.random() * wh.length))];
@@ -625,6 +625,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         AudioPlayer.play("Zerzuran_Chess/src/resources/audio/stalemate.wav");
         System.out.println("Stalemate! Enabling countermeasures");
         decay = true;
+        cooldown = 4;
         Tile[] i = chessBoard.getOccupiedTiles();
         i[(int) (Math.random() * i.length)].setPiece(null);
     }
