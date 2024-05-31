@@ -40,7 +40,7 @@ public class King extends Piece {
         if ((Math.abs(dx) == 2 && dy == 0) || (Math.abs(dx) == 3 && dy == 0) || (Math.abs(dy) == 2 && dx == 0) || (Math.abs(dy) == 3 && dx == 0)){
             if (destinationTile.getPiece() != null){
                 if (destinationTile.getPiece().getColor() == color && !(destinationTile.getPiece() instanceof Pawn)){
-                    return Moves.rookMove(x, y, dx, dy, board);
+                    return Moves.rookMove(x, y, newX - x, newY - y, board);
                 }
             }
         }
