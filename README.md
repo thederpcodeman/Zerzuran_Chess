@@ -9,7 +9,7 @@ Rules:
 Chess... but with randomly selected varient gamerules, keept secret from both players. (you just have to figure out what's going on.)
 On your turn, you move 1 of your pieces. (keep in mind you may have to make multiple moves in a row for one reason or another.)
 If either player has no Royal pieces remaining, or only 1 piece remaining, they lose, and the other player wins.
-Because I beleve the game is better without it, you are allowed to move into check, and checkmate does not matter. (I will not allow accusations of this being the result of me being unable to program check and checkmate, I removed it on purpose and there are still remnants in the code. For instanse moves that would put you in check are highlighted red, of course I could have had check and checkmate, I mean Andrew/Abigail programmed that part, not me, but still.)
+Because I beleve the game is better without it, you are allowed to move into check, and checkmate does not matter. (I will not allow accusations of this being the result of me being unable to program check and checkmate, I removed it on purpose and there are still remnants in the code. For instanse moves that would put you in check are highlighted red, of course I could have had check and checkmate, I mean, someone else programned this part, but still.)
 
 
 Controls:
