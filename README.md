@@ -20,3 +20,5 @@ I opens the AI selection menu
 SPACE causes the AI to make a move
 R opens the reset menu, where you can querey, disable, or rerandomize the variant gamerules. Additionally you can reset the game, or reset to a specific setup varient.
 O activates the debug toggle, clicking on a tile will open the debug menu.
+
+The world beyond the Ice Wall by Ohawhewhe: https://www.deviantart.com/ohawhewhe/art/BTIW-1830-AD-THE-FLIGHT-OF-THE-EAGLE-948996288
