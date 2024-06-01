@@ -268,8 +268,8 @@ public class Tile extends JPanel {
         possibilities.add("Gryphon");
         possibilities.add("Gryphon");
 
-        possibilities.add("Bull");
-        possibilities.add("Bull");
+        possibilities.add("Gewirr");
+        possibilities.add("Gewirr");
 
         possibilities.add("Pegasus rider");
         possibilities.add("Pegasus rider");
@@ -426,7 +426,7 @@ public class Tile extends JPanel {
                 setPiece(new Frog(piece.getColor()));
             } else if (s == "Elephant") {
                 setPiece(new Elephant(piece.getColor()));
-            } else if (s == "Bull") {
+            } else if (s == "Gewirr") {
                 setPiece(new Bull(piece.getColor()));
             } else if (s == "Gryphon") {
                 setPiece(new Gryphon(piece.getColor()));
