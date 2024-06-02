@@ -476,7 +476,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         }else{
             if (tile.getPiece() == null){
                 setTitle("Chesscapades");
-                setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
+                setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/Logo.png"));
             }else{
                 String newname;
                 if (myst) {
@@ -491,7 +491,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     }
                 }else if (skatter){
                     newname = "Zerzuran Chess";
-                    setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
+                    setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wLogo.png"));
                 }else{
                     newname = tile.getPiece().name;
                     setIconImage(tile.getPiece().getImageIcon().getImage());
@@ -1041,7 +1041,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                             JLabel lbl = new JLabel(showToUser);
                             lbl.setVisible(true);
                             panel.add(lbl);
-                            frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
+                            frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wLogo.png"));
                         }
                     } );
 
