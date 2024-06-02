@@ -42,7 +42,7 @@ public class HelpAction extends AbstractAction {
         String[] choices = {"Basic Rules", "Piece Specific Rules"};
 
         final JComboBox<String> cb = new JComboBox<String>(choices);
-        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/Logo.png"));
+        frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
         cb.setVisible(true);
         panel.add(cb);
 
