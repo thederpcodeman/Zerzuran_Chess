@@ -22,3 +22,8 @@ R opens the reset menu, where you can query, disable, or re randomize the varian
 O activates the debug toggle, clicking on a tile will open the debug menu.
 
 The world beyond the Ice Wall by Ohawhewhe: https://www.deviantart.com/ohawhewhe/art/BTIW-1830-AD-THE-FLIGHT-OF-THE-EAGLE-948996288
+
+Pieces from:
+https://www.deviantart.com/ohawhewhe/art/BTIW-1830-AD-THE-FLIGHT-OF-THE-EAGLE-948996288,
+Nat-of-personifs
+
