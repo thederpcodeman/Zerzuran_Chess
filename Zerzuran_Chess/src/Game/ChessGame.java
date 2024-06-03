@@ -1346,6 +1346,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Step Into Darkness Pawn");//
         possibilities.add("Short Rook (WIP: functions but uses rook image)");//
         possibilities.add("Paladin");//
+        possibilities.add("Super Rook");//
+        possibilities.add("Super Bishop");//
         possibilities.add("Pawn");//
         possibilities.add("Soldier");//
         possibilities.add("Pikeman");//
@@ -1505,6 +1507,10 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new CheckerButNot(c));
             }else if (Objects.equals(s, "Paladin")) {
                 tile.setPiece(new Paladin(c));
+            } else if (Objects.equals(s, "Super Rook")) {
+                tile.setPiece(new SuperRook(c));
+            }else if (Objects.equals(s, "Super Bishop")) {
+                tile.setPiece(new SuperBishop(c));
             }
         }
     }

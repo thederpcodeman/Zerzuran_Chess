@@ -157,7 +157,7 @@ public class Cloning {
     }
 
     public static Piece Super(int color){
-        double ran = (Math.random() * 6.5);
+        double ran = (Math.random() * 8);
         if (ran < 1.4) {
             return new Lion(color);
         } ran -= 1.3;
@@ -175,6 +175,12 @@ public class Cloning {
         } ran -= 1;
         if (ran < 0.5){
             return new Seraphim(color);
+        }
+        if (ran < 0.75){
+            return new SuperRook(color);
+        }
+        if (ran < 0.75){
+            return new SuperBishop(color);
         }
         return null;
     }

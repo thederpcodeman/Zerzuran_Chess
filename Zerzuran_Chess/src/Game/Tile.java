@@ -322,6 +322,14 @@ public class Tile extends JPanel {
         possibilities.add("Paladin");
         possibilities.add("Paladin");
 
+        possibilities.add("King");
+        possibilities.add("General");
+        possibilities.add("Tyrant");
+        possibilities.add("Flag bearer");
+        possibilities.add("Empress");
+        possibilities.add("Theocrat");
+        possibilities.add("Keegan");
+
 
 
         Collections.shuffle(possibilities);
@@ -339,18 +347,32 @@ public class Tile extends JPanel {
             o -= 5;
             ArrayList<String> bonusOptions = new ArrayList<>();
             bonusOptions.add("King");
-            bonusOptions.add("Amazon");
             bonusOptions.add("General");
-            bonusOptions.add("Lion");
             bonusOptions.add("Tyrant");
-            bonusOptions.add("Greatwyrm");
             bonusOptions.add("Flag bearer");
-            bonusOptions.add("Quetzalcoatl");
-            bonusOptions.add("Wolf");
             bonusOptions.add("Empress");
             bonusOptions.add("Theocrat");
             bonusOptions.add("Keegan");
+
+            bonusOptions.add("Amazon");
+            bonusOptions.add("Lion");
+            bonusOptions.add("Greatwyrm");
+            bonusOptions.add("Quetzalcoatl");
+            bonusOptions.add("Wolf");
             bonusOptions.add("Seraphim");
+            bonusOptions.add("Super Rook");
+            bonusOptions.add("Super Bishop");
+
+            bonusOptions.add("Amazon");
+            bonusOptions.add("Lion");
+            bonusOptions.add("Greatwyrm");
+            bonusOptions.add("Quetzalcoatl");
+            bonusOptions.add("Wolf");
+            bonusOptions.add("Seraphim");
+            bonusOptions.add("Super Rook");
+            bonusOptions.add("Super Bishop");
+
+
             for (int i = 0; i < o; i++){
                 Collections.shuffle(bonusOptions);
                 possibilities.add(bonusOptions.get(1));
@@ -505,6 +527,10 @@ public class Tile extends JPanel {
                 setPiece(new Seraphim(piece.getColor()));
             } else if (s == "Paladin") {
                 setPiece(new Paladin(piece.getColor()));
+            } else if (s == "Super Rook") {
+                setPiece(new SuperRook(piece.getColor()));
+            } else if (s == "Super Bishop") {
+                setPiece(new SuperBishop(piece.getColor()));
             }
 
             if (roy && getPiece() != null){
