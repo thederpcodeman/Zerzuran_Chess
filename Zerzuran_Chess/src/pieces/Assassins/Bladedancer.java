@@ -9,7 +9,7 @@ import Zerzuran_Chess.src.pieces.Piece;
 import javax.swing.*;
 
 public class Bladedancer extends Piece {
-    boolean bonusMove;
+    public boolean bonusMove;
     public Bladedancer(int color) {
         super(color);
         value = 7;
