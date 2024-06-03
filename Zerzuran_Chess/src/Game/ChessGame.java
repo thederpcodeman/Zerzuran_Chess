@@ -263,10 +263,10 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     Piece i = start.getPiece();
                     start.setPiece(move.end.getPiece());
                     move.end.setPiece(i);
-                //}else if (start.getPiece() instanceof Swapper && move.end.getPiece() != null && (move.end.getPiece() instanceof Pawn || (start.getPiece().color == move.end.getPiece().color))){
-                //    Piece i = start.getPiece();
-                //    start.setPiece(move.end.getPiece());
-                //    move.end.setPiece(i);
+                }else if (start.getPiece() instanceof Paladin && move.end.getPiece() != null && ((start.getPiece().color == move.end.getPiece().color))){
+                    Piece i = start.getPiece();
+                    start.setPiece(move.end.getPiece());
+                    move.end.setPiece(i);
                 }else{
                     move.end.setPiece(start.getPiece());
                     start.setPiece(null);
@@ -1345,6 +1345,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Wolf");//
         possibilities.add("Step Into Darkness Pawn");//
         possibilities.add("Short Rook (WIP: functions but uses rook image)");//
+        possibilities.add("Paladin");//
         possibilities.add("Pawn");//
         possibilities.add("Soldier");//
         possibilities.add("Pikeman");//
@@ -1502,6 +1503,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             }
             else if (Objects.equals(s, "CheckerButNot")) {
                 tile.setPiece(new CheckerButNot(c));
+            }else if (Objects.equals(s, "Paladin")) {
+                tile.setPiece(new Paladin(c));
             }
         }
     }

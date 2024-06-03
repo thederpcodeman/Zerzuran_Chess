@@ -319,6 +319,9 @@ public class Tile extends JPanel {
         possibilities.add("Templar");
         possibilities.add("Templar");
 
+        possibilities.add("Paladin");
+        possibilities.add("Paladin");
+
 
 
         Collections.shuffle(possibilities);
@@ -500,6 +503,8 @@ public class Tile extends JPanel {
                 setPiece(new Templar(piece.getColor()));
             } else if (s == "Seraphim") {
                 setPiece(new Seraphim(piece.getColor()));
+            } else if (s == "Paladin") {
+                setPiece(new Paladin(piece.getColor()));
             }
 
             if (roy && getPiece() != null){
