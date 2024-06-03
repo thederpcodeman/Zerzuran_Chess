@@ -34,7 +34,7 @@ public class Skatterer {
                     a = "Zerzuran_Chess/src/resources/bBuffalo.png";
                     break;
                 case 8:
-                    a = "Zerzuran_Chess/src/resources/bBull.png";
+                    a = "Zerzuran_Chess/src/resources/bGewirr.png";
                     break;
                 case 9:
                     a = "Zerzuran_Chess/src/resources/bCamel.png";
@@ -135,7 +135,7 @@ public class Skatterer {
                     a = "Zerzuran_Chess/src/resources/wBuffalo.png";
                     break;
                 case 8:
-                    a = "Zerzuran_Chess/src/resources/wBull.png";
+                    a = "Zerzuran_Chess/src/resources/wGewirr.png";
                     break;
                 case 9:
                     a = "Zerzuran_Chess/src/resources/wCamel.png";
