@@ -256,4 +256,5 @@ public class Moves {
         }
         return false;
     }
+
 }
