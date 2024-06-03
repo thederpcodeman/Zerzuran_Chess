@@ -11,7 +11,7 @@ public class Seraphim extends Bladedancer {
     private boolean bm;
     public Seraphim(int color) {
         super(color);
-        value = 15;
+        value = 12;
         name = "Seraphim";
         bm = true;
     }

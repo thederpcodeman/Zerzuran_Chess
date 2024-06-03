@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Amazon extends Piece {
     public Amazon(int color) {
         super(color);
-        value = 12;
+        value = 13;
         name = "Amazon";
     }
 
