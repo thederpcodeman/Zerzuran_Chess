@@ -29,7 +29,6 @@ public class Paladin extends Piece {
         if (dy == 0){
             return true;
         }else if (Math.abs(dy) <= 2){
-            System.out.println("o");
             Tile destination = board.getTile(Board.getLocationFromCords(newX, newY));
             return (Moves.allClear(getColor(), destination) && Moves.rookMove(x, y, dx, dy, board));
         }
