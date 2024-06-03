@@ -1,6 +1,7 @@
 package Zerzuran_Chess.src.pieces.Assassins;
 
 import Zerzuran_Chess.src.Game.Board;
+import Zerzuran_Chess.src.Game.ChessGame;
 import Zerzuran_Chess.src.Game.Tile;
 import Zerzuran_Chess.src.pieces.Moves;
 import Zerzuran_Chess.src.pieces.Piece;
@@ -11,7 +12,7 @@ public class Shadowmancer extends Piece {
     private boolean cR;
     public Shadowmancer(int color) {
         super(color);
-        value = 6;
+        value = 8;
         name = "Assassin";
         cR = false;
     }
@@ -32,20 +33,28 @@ public class Shadowmancer extends Piece {
         Boolean can = true;
         if (!cR){
             Tile destination = board.getTile(Board.getLocationFromCords(newX, newY));
-            if (!Moves.allClear(getColor(), destination)){
+            if (destination.getPiece() != null){
                 return false;
             }else if (forReal){
                 cR = true;
             }
         }
+        boolean r = false;
+        if (ChessGame.ruth == true){
+            r = true;
+            ChessGame.ruth = false;
+        }
         for (int i = 0; i < 64; i++){
             if (board.getTile(i).getPiece() != null){
                 if (board.getTile(i).getPiece().getColor() != getColor()){
-                    if (board.getTile(i).isLegalMove(i, board, false)){
+                    if (board.getTile(i).isLegalMove(Board.getLocationFromCords(newX, newY), board, false)){
                         can = false;
                     }
                 }
             }
+        }
+        if (r){
+            ChessGame.ruth = true;
         }
         return can;
     }

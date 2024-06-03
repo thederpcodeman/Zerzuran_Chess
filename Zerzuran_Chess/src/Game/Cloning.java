@@ -1,16 +1,14 @@
 package Zerzuran_Chess.src.Game;
 
 import Zerzuran_Chess.src.pieces.*;
-import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
-import Zerzuran_Chess.src.pieces.Assassins.Assassin;
-import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
+import Zerzuran_Chess.src.pieces.Assassins.*;
 import Zerzuran_Chess.src.pieces.Unique.shortRook;
 import Zerzuran_Chess.src.pieces.pawns.*;
 import Zerzuran_Chess.src.pieces.royals.*;
 
 public class Cloning {
     public static Piece Common(int color){
-        double ran = (Math.random() * (5 +  1.6 + 2.2 + 0.334 + 0.334 + 0.334 + 0.3 + 0.25 + 0.2 + 0.15 + 0.1));
+        double ran = (Math.random() * (5 +  1.6 + 2.2 + 0.334 + 0.334 + 0.334 + 0.3 + 0.25 + 0.2 + 0.15 + 0.1 + 0.01 + 0.1));
         if (ran < 1){
             return new Rook(color);
         } ran -= 1;
@@ -68,12 +66,18 @@ public class Cloning {
         if (ran < 0.05){
             return new Assassin(color);
         } ran -= 0.05;
+        if (ran < 0.1){
+            return new TrueAssasin(color);
+        } ran -= 0.1;
         if (ran < 0.05){
             return new Bladedancer(color);
         } ran -= 0.05;
         if (ran < 0.05){
             return new Action_Man(color);
         } ran -= 0.05;
+        if (ran < 0.01){
+            return new Shadowmancer(color);
+        } ran -= 0.01;
         if (ran < 0.1){
             return new Buffalo(color);
         }
@@ -242,7 +246,7 @@ public class Cloning {
         return null;
     }
     public static Piece Fear(int color){
-        int ran = (int) (Math.random() * 50);
+        int ran = (int) (Math.random() * 53);
         if (ran == 0){
             return new Elephant(color);
         } else if (ran == 1){
@@ -341,9 +345,16 @@ public class Cloning {
             return new shortRook(color);
         } else if (ran == 48){
             return new Seraphim(color);
-        }
-        else if (ran == 49){
+        } else if (ran == 49){
             return new Paladin(color);
+        } else if (ran == 50){
+            return new SuperRook(color);
+        } else if (ran == 51){
+            return new SuperBishop(color);
+        } else if (ran == 52){
+            return new Shadowmancer(color);
+        } else if (ran == 53){
+            return new TrueAssasin(color);
         }
         return (null);
     }

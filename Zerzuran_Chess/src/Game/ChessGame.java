@@ -1,10 +1,7 @@
 package Zerzuran_Chess.src.Game;
 
 import Zerzuran_Chess.src.pieces.*;
-import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
-import Zerzuran_Chess.src.pieces.Assassins.Assassin;
-import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
-import Zerzuran_Chess.src.pieces.Assassins.Swapper;
+import Zerzuran_Chess.src.pieces.Assassins.*;
 import Zerzuran_Chess.src.pieces.Unique.CheckerButNot;
 import Zerzuran_Chess.src.pieces.Unique.StepPawn;
 import Zerzuran_Chess.src.pieces.Unique.shortRook;
@@ -1321,6 +1318,8 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Assassin2");//
         possibilities.add("Assassin3");//
         possibilities.add("Assassin4");//
+        possibilities.add("Assassin5");//
+        possibilities.add("Assassin6");//
         possibilities.add("Manticore");//
         possibilities.add("Greatwyrm");//
         possibilities.add("Mage");//
@@ -1469,6 +1468,10 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new Action_Man(c));
             } else if (Objects.equals(s, "Assassin4")) {
                 tile.setPiece(new Swapper(c));
+            } else if (Objects.equals(s, "Assassin5")) {
+                tile.setPiece(new Shadowmancer(c));
+            } else if (Objects.equals(s, "Assassin6")) {
+                tile.setPiece(new TrueAssasin(c));
             } else if (Objects.equals(s, "Spider")) {
                 tile.setPiece(new Spider(c));
             } else if (Objects.equals(s, "Manticore")) {
