@@ -475,7 +475,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             debugClick(tile);
         }else{
             if (tile.getPiece() == null){
-                setTitle("Chesscapades");
+                setTitle("Zerzuran Chess");
                 setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
             }else{
                 String newname;
