@@ -14,7 +14,7 @@ public class TrueAssasin extends Piece {
         super(color);
         name = "Assassin";
         s = Cloning.Fear(color);
-        value = s.value;
+        value = s.value + 1;
         wall = s.wall;
         bomb = s.bomb;
         royal = s.royal;
@@ -33,7 +33,17 @@ public class TrueAssasin extends Piece {
 
     @Override
     public boolean isLegalMove(int x, int y, int newX, int newY, Board board, boolean forReal) {
-        return s.isLegalMove(x, y, newX, newY, board, forReal);
+        boolean b = s.isLegalMove(x, y, newX, newY, board, forReal);
+        if (forReal){
+            if (((int) (Math.random() * 20)) == 1){
+                s = Cloning.Fear(color);
+                value = s.value + 1;
+                wall = s.wall;
+                bomb = s.bomb;
+                royal = s.royal;
+            }
+        }
+        return b;
     }
 
 }
