@@ -8,7 +8,7 @@ import javax.swing.*;
 public class France extends Piece {
     public France(int color) {
         super(color);
-        value = 14;
+        value = 8;
         name = "France";
     }
 
