@@ -67,7 +67,7 @@ public class Cloning {
             return new Assassin(color);
         } ran -= 0.05;
         if (ran < 0.1){
-            return new TrueAssasin(color);
+            return new Chameleon(color);
         } ran -= 0.1;
         if (ran < 0.05){
             return new Bladedancer(color);
@@ -181,10 +181,10 @@ public class Cloning {
             return new Seraphim(color);
         }
         if (ran < 0.75){
-            return new SuperRook(color);
+            return new Reptilian(color);
         }
         if (ran < 0.75){
-            return new SuperBishop(color);
+            return new France(color);
         }
         return null;
     }
@@ -348,13 +348,13 @@ public class Cloning {
         } else if (ran == 49){
             return new Paladin(color);
         } else if (ran == 50){
-            return new SuperRook(color);
+            return new Reptilian(color);
         } else if (ran == 51){
-            return new SuperBishop(color);
+            return new France(color);
         } else if (ran == 52){
             return new Shadowmancer(color);
         } else if (ran == 53){
-            return new TrueAssasin(color);
+            return new Chameleon(color);
         }
         return (null);
     }

@@ -5,8 +5,8 @@ import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 
-public class SuperBishop extends Piece {
-    public SuperBishop(int color) {
+public class France extends Piece {
+    public France(int color) {
         super(color);
         value = 14;
         name = "Super Bishop";

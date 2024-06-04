@@ -358,7 +358,7 @@ public class Tile extends JPanel {
             bonusOptions.add("Quetzalcoatl");
             bonusOptions.add("Wolf");
             bonusOptions.add("Seraphim");
-            bonusOptions.add("Super Rook");
+            bonusOptions.add("Reptilian");
             bonusOptions.add("Super Bishop");
 
             bonusOptions.add("Amazon");
@@ -367,8 +367,8 @@ public class Tile extends JPanel {
             bonusOptions.add("Quetzalcoatl");
             bonusOptions.add("Wolf");
             bonusOptions.add("Seraphim");
-            bonusOptions.add("Super Rook");
-            bonusOptions.add("Super Bishop");
+            bonusOptions.add("Reptilian");
+            bonusOptions.add("France");
 
 
             for (int i = 0; i < o; i++){
@@ -481,7 +481,7 @@ public class Tile extends JPanel {
                 }else if (ran == 4){
                     setPiece(new Shadowmancer(piece.getColor()));
                 }else if (ran == 5){
-                    setPiece(new TrueAssasin(piece.getColor()));
+                    setPiece(new Chameleon(piece.getColor()));
                 }
             } else if (s == "Spider") {
                 setPiece(new Spider(piece.getColor()));
@@ -529,10 +529,10 @@ public class Tile extends JPanel {
                 setPiece(new Seraphim(piece.getColor()));
             } else if (s == "Paladin") {
                 setPiece(new Paladin(piece.getColor()));
-            } else if (s == "Super Rook") {
-                setPiece(new SuperRook(piece.getColor()));
-            } else if (s == "Super Bishop") {
-                setPiece(new SuperBishop(piece.getColor()));
+            } else if (s == "Reptilian") {
+                setPiece(new Reptilian(piece.getColor()));
+            } else if (s == "France") {
+                setPiece(new France(piece.getColor()));
             }
 
             if (roy && getPiece() != null){

@@ -5,8 +5,8 @@ import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 
-public class SuperRook extends Piece {
-    public SuperRook(int color) {
+public class Reptilian extends Piece {
+    public Reptilian(int color) {
         super(color);
         value = 14;
         name = "Super Rook";

@@ -2,15 +2,13 @@ package Zerzuran_Chess.src.pieces.Assassins;
 
 import Zerzuran_Chess.src.Game.Board;
 import Zerzuran_Chess.src.Game.Cloning;
-import Zerzuran_Chess.src.Game.Tile;
-import Zerzuran_Chess.src.pieces.Moves;
 import Zerzuran_Chess.src.pieces.Piece;
 
 import javax.swing.*;
 
-public class TrueAssasin extends Piece {
+public class Chameleon extends Piece {
     private Piece s;
-    public TrueAssasin(int color) {
+    public Chameleon(int color) {
         super(color);
         name = "Assassin";
         s = Cloning.Fear(color);
