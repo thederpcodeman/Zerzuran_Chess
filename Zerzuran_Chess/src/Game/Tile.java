@@ -1,10 +1,7 @@
 package Zerzuran_Chess.src.Game;
 
 import Zerzuran_Chess.src.pieces.*;
-import Zerzuran_Chess.src.pieces.Assassins.Action_Man;
-import Zerzuran_Chess.src.pieces.Assassins.Assassin;
-import Zerzuran_Chess.src.pieces.Assassins.Bladedancer;
-import Zerzuran_Chess.src.pieces.Assassins.Swapper;
+import Zerzuran_Chess.src.pieces.Assassins.*;
 import Zerzuran_Chess.src.pieces.pawns.Checker;
 import Zerzuran_Chess.src.pieces.pawns.Pawn;
 import Zerzuran_Chess.src.pieces.pawns.Prince;
@@ -282,6 +279,7 @@ public class Tile extends JPanel {
 
         possibilities.add("Assassin");
         possibilities.add("Assassin");
+        possibilities.add("Assassin");
 
         possibilities.add("Manticore");
         possibilities.add("Manticore");
@@ -480,6 +478,10 @@ public class Tile extends JPanel {
                     setPiece(new Action_Man(piece.getColor()));
                 }else if (ran == 3){
                     setPiece(new Swapper(piece.getColor()));
+                }else if (ran == 4){
+                    setPiece(new Shadowmancer(piece.getColor()));
+                }else if (ran == 5){
+                    setPiece(new TrueAssasin(piece.getColor()));
                 }
             } else if (s == "Spider") {
                 setPiece(new Spider(piece.getColor()));
