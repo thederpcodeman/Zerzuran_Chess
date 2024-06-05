@@ -215,7 +215,7 @@ public class Cloning {
         return null;
     }
     public static Piece rPawn(int color){
-        double ran = (Math.random() * (3 + 1.5 + 1 + 0.75 + 1 + 0.5 + 0.5 + 0.2 + 0.01));
+        double ran = (Math.random() * (3 + 1.5 + 1 + 0.75 + 1 + 0.5 + 0.5 + 0.2));
         if (ran < 3){
             return new Pawn(color);
         } ran -= 3;
@@ -239,9 +239,6 @@ public class Cloning {
         } ran -= 0.5;
         if (ran < 0.2){
             return new Checker(color);
-        }   ran -= 0.2;
-        if (ran < 0.01){
-            return new Duck(color);
         }
         return null;
     }
@@ -325,9 +322,7 @@ public class Cloning {
             return new Wall(color);
         } else if (ran == 38){
             return new Soldier(color);
-        } else if (ran == 39){
-            return new Duck(color);
-        } else if (ran == 40){
+        }else if (ran == 40){
             return new Bow(color);
         } else if (ran == 41){
             return new Quetzacoatl(color);
@@ -353,7 +348,7 @@ public class Cloning {
             return new France(color);
         } else if (ran == 52){
             return new Shadowmancer(color);
-        } else if (ran == 53){
+        } else if (ran == 39){
             return new Chameleon(color);
         }
         return (null);

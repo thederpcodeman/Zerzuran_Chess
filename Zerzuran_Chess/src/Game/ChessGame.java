@@ -327,12 +327,6 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 } else if (checked instanceof Mage){
                     ((Mage) checked).mana += 1;
                     chessBoard.getTile(check).setPiece(chessBoard.getTile(check).getPiece());
-                } else if (checked instanceof Mage){
-                    ((Mage) checked).mana += 1;
-                    chessBoard.getTile(check).setPiece(chessBoard.getTile(check).getPiece());
-                } else if ((checked instanceof Duck) && (((Duck) checked).bonusMove > 0)){
-                    ((Duck) checked).bonusMove -= 1;
-                    chessBoard.getTile(check).setPiece(chessBoard.getTile(check).getPiece());
                 }
             }
 
@@ -1329,7 +1323,6 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Keegan");//
         possibilities.add("AugKnight");//
         possibilities.add("Flag bearer");//
-        possibilities.add("Duck");//
         possibilities.add("CheckerButNot");//
         possibilities.add("Empress");//
         possibilities.add("Theocrat");//
@@ -1486,9 +1479,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new Immortal(c));
             } else if (Objects.equals(s, "Keegan")) {
                 tile.setPiece(new Keegan(c));
-            } else if (Objects.equals(s, "Duck")) {
-                tile.setPiece(new Duck(c));
-            } else if (Objects.equals(s, "AugKnight")) {
+            }else if (Objects.equals(s, "AugKnight")) {
                 tile.setPiece(new AugmentedKnight(c));
             } else if (Objects.equals(s, "+ Royal")) {
                 tile.getPiece().royal = true;
