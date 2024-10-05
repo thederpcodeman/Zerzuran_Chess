@@ -84,8 +84,10 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
     public int wBonusTurns;
 
     public int bBonusTurns;
+    public AI com;
 
     public ChessGame(int size){
+        com = new AI(1, 0.2, 0.4, 0, 4, 7, 10, 0.7, 0.5, 0.2, 0.5, 0.2, 15, -0.1, 0.5, 0.2, 1, -0.1, 10, 0.2, 3);
         rng = 10;
         wBackWall = false;
         debugToggle = false;
