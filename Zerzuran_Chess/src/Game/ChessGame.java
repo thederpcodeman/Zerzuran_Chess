@@ -678,7 +678,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         double moveMin = -999999;
         int selected = 0;
         for (int mov = 0; mov < choices.size(); mov++){
-            double sc = choices.get(mov).score(rng);
+            double sc = choices.get(mov).score(com);
             if (sc > moveMin){
                 moveMin = sc;
                 selected = mov;
