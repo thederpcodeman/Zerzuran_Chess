@@ -9,15 +9,15 @@ public class Bull extends Piece {
     public Bull(int color) {
         super(color);
         value = 2;
-        name = "Gewirrbeastie";
+        name = "Bull";
     }
 
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/bGewirr.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bBull.png"));
         } else if(color == 1) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/wGewirr.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wBull.png"));
         } else {
             return null;
         }
