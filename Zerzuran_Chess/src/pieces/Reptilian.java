@@ -9,7 +9,7 @@ public class Reptilian extends Piece {
     public Reptilian(int color) {
         super(color);
         value = 14;
-        name = "Super Rook";
+        name = "Mark Zuckerberg";
     }
 
     @Override

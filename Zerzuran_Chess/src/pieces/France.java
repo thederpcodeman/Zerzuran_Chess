@@ -15,9 +15,9 @@ public class France extends Piece {
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/bGreatwyrm.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bFrance.png"));
         } else if(color == 1) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/wGreatwyrm.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wFrance.png"));
         } else {
             return null;
         }
