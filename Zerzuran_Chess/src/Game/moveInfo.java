@@ -175,6 +175,19 @@ public class moveInfo {
             }
         }
 
+        //risk
+        for (Tile i : board.getOccupiedTilesOfColor(us)){
+            controled = false;
+            for (Tile j : board.getOccupiedTilesOfColor(1 - us)){
+                if (i != j && j.isLegalMove(i.getLocationOnBoard(), board, false)){
+                    controled = true;
+                }
+            }
+            if (controled){
+                score -= com.risk * i.getPiece().value;
+            }
+        }
+
 
 
 

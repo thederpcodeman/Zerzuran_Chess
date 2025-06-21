@@ -1225,11 +1225,33 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
             possibilities.add("Basic Bob (default)");
             possibilities.add("Cassody");
+            possibilities.add("Serious Steve");
             possibilities.add("The Spider");
             possibilities.add("'Snake Oil' Sal");
             possibilities.add("George Bush");
             possibilities.add("Lightning Leroy J");
             possibilities.add("Cassody");
+            possibilities.add("Random Moves");
+            possibilities.add("Test_All_One");
+            possibilities.add("Test_Mat");
+            possibilities.add("Test_Trap");
+            possibilities.add("Test_Risk");
+            possibilities.add("Test_Free");
+            possibilities.add("Test_en_pessant");
+            possibilities.add("Test_Check");
+            possibilities.add("Test_Checkmate");
+            possibilities.add("Test_Vulnerable");
+            possibilities.add("Test_Def");
+            possibilities.add("Test_Center");
+            possibilities.add("Test_Center_Control");
+            possibilities.add("Test_Royal");
+            possibilities.add("Test_Pow");
+            possibilities.add("Test_Threat");
+            possibilities.add("Test_Adv");
+            possibilities.add("Test_Finisher");
+            possibilities.add("Test_Bongcloud");
+            possibilities.add("Test_Safe");
+            possibilities.add("Test_Danger");
 
             JPanel jPanel = new JPanel(new GridBagLayout());
             JComboBox comboBox = new JComboBox(possibilities.toArray());
@@ -1239,47 +1261,173 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             if(input == JOptionPane.OK_OPTION) {
                 String s = (String) comboBox.getSelectedItem();
                 if (Objects.equals(s, "Basic Bob (default)")) {
-                    com = new AI(1, 0.2, 0.4, 0,
+                    com = new AI(10, 0.2, 0.4, 0,
                             4, 7, 10, 0.7, 0.5,
                             0.2, 0.5, 0.2, 15,
                             -0.1, 0.5, 0.2, 1,
                             -0.1, 10, 0.2, 3);
                 }else if (Objects.equals(s, "Cassody")) {
-                    com = new AI(1.2, 0.2, 0.2, 0.1,
+                    com = new AI(7, 0.2, 0.2, 0.1,
                             6, 9, 15, 0.5, 0.4,
                             0.2, 0.6, 0.3, 20,
-                            0.05, 0.7,0.4, 5,
+                            0.05, 0.7,0.4, 50,
                             0.2,15, 0.3, 5);
                 }else if (Objects.equals(s, "The Spider")) {
-                    com = new AI(1, 0.2, 0.4, 0,
-                            4, 7, 10, 0.7, 0.5,
-                            0.2, 0.5, 0.2, 15,
-                            -0.1, 0.5, 0.2, 1,
-                            -0.1, 10, 0.2, 3);
+                    com = new AI(12, 0.5, 0.5, 0.5,
+                            0, 20, 50, 1, 1,
+                            1, 0, 0.5, 250,
+                            0, 1, 0.5, 0,
+                            0.25, 50, 0.5, 0);
                 }else if (Objects.equals(s, "'Snake Oil' Sal")) {
-                    com = new AI(1, 0.2, 0.4, 0,
-                            4, 7, 10, 0.7, 0.5,
-                            0.2, 0.5, 0.2, 15,
-                            -0.1, 0.5, 0.2, 1,
-                            -0.1, 10, 0.2, 3);
+                    com = new AI(1, 1, 1, 0,
+                            0, 5, 10, 0, 2,
+                            0.5, 1.5, 0.5, 12,
+                            0, 0.2, 0.2, 10,
+                            0,  7, 0.6, 5);
                 }else if (Objects.equals(s, "George Bush")) {
-                    com = new AI(1, 0.2, 0.4, 0,
+                    com = new AI(5, 0.2, 0.4, 0,
                             4, 7, 10, 0.7, 0.5,
                             0.2, 0.5, 0.2, 15,
                             -0.1, 0.5, 0.2, 1,
-                            -0.1, 10, 0.2, 3);
+                            -0.1, 10, 0.5, 3);
                 }else if (Objects.equals(s, "Lightning Leroy J")) {
-                    com = new AI(1, 0.2, 0.4, 0,
-                            4, 7, 10, 0.7, 0.5,
-                            0.2, 0.5, 0.2, 15,
-                            -0.1, 0.5, 0.2, 1,
-                            -0.1, 10, 0.2, 3);
-                }else if (Objects.equals(s, "bob")) {
-                    com = new AI(1, 0.2, 0.4, 0,
-                            4, 7, 10, 0.7, 0.5,
-                            0.2, 0.5, 0.2, 15,
-                            -0.1, 0.5, 0.2, 1,
-                            -0.1, 10, 0.2, 3);
+                    com = new AI(7.5, 0, 0, 0.2,
+                            5, 10, 100, 0, 0,
+                            0, 0, 0, 1000,
+                            0.5, 0.2, 1, 10,
+                            0.2, 100, 0.1, 2);
+                }else if (Objects.equals(s, "Serious Steve")) {
+                    com = new AI(100, 1, 15, 1,
+                            5, 80, 200, 15, 4,
+                            1, 2, 3, 300,
+                            -0.7, 10, 1, 50,
+                            -1, 200, 15, 5);
+                }else if (Objects.equals(s, "Test_All_One")) {
+                    com = new AI(1, 1, 1,1,
+                            1, 1,1, 1, 1,
+                            1, 1, 1,1,
+                            1, 1,1, 1,
+                            1,1, 1, 1);
+                }else if (Objects.equals(s, "Random Moves")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Mat")) {
+                    com = new AI(1,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Trap")) {
+                    com = new AI(0,1,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Risk")) {
+                    com = new AI(0,0,1,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Free")) {
+                    com = new AI(0,0,0,1,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_en_pessant")) {
+                    com = new AI(0,0,0,0,
+                            1,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Check")) {
+                    com = new AI(0,0,0,0,
+                            0,1,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Checkmate")) {
+                    com = new AI(0,0,0,0,
+                            0,0,1,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Vulnerable")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,1,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Def")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,1,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Center")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            1,0,0,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Center_Control")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,1,0,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Royal")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,1,
+                            0,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Pow")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            1,0,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Threat")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,1,0,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Adv")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,1,0,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Finisher")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,1,
+                            0,0,0, 1);
+                }else if (Objects.equals(s, "Test_Bongcloud")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            1,0,0, 1);
+                }else if (Objects.equals(s, "Test_Safe")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,1,0, 1);
+                }else if (Objects.equals(s, "Test_Danger")) {
+                    com = new AI(0,0,0,0,
+                            0,0,0,0,0,
+                            0,0,0,0,
+                            0,0,0,0,
+                            0,0,1, 1);
                 }
             }
         }
