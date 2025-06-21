@@ -33,7 +33,7 @@ public class moveInfo {
             score -= com.safety;
         }
         //peasant
-        if (start.getPiece() instanceof Pawn){
+        if (start.getPiece() instanceof Pawn && end.getLocationOnBoard() + (us * 16) - 8 > 64 && end.getLocationOnBoard() + (us * 16) - 8 <= 0){
             Piece p = board.getTile(end.getLocationOnBoard() + (us * 16) - 8).getPiece();
             if (p != null && p instanceof Pawn && p.color != us && p.moved2 != 0){
                 score += com.pessant;
