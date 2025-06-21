@@ -468,7 +468,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             debugClick(tile);
         }else{
             if (tile.getPiece() == null){
-                setTitle("Zerzuran Chess");
+                setTitle("Chesscapades");
                 setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
             }else{
                 String newname;
@@ -483,7 +483,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                         setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/bUnknown.png"));
                     }
                 }else if (skatter){
-                    newname = "Zerzuran Chess";
+                    newname = "Chesscapades";
                     setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
                 }else{
                     newname = tile.getPiece().name;
