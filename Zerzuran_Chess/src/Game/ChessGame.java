@@ -1223,23 +1223,13 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             AudioPlayer.play("Zerzuran_Chess/src/resources/audio/promote.wav");
             ArrayList<String> possibilities = new ArrayList<String>();
 
-            possibilities.add("Rebecca"); // 0
-            possibilities.add("Bob"); // 10
-            possibilities.add("Mr. & Mrs. Patel"); // 25
-            possibilities.add("Whitney"); // 62
-            possibilities.add("Luigi"); // 155
-            possibilities.add("John"); // 232
-            possibilities.add("Carl"); // 348
-            possibilities.add("David"); // 522
-            possibilities.add("Doug"); // 783
-            possibilities.add("Sarah"); // 1174
-            possibilities.add("Timothy"); // 1761
-            possibilities.add("Jessie"); // 2641
-            possibilities.add("Peter"); // 3961
-            possibilities.add("George"); // 5941
-            possibilities.add("Cthulhu"); // 8911
-            possibilities.add("Jerry from Hypixel Skyblock"); // 13366
-
+            possibilities.add("Basic Bob (default)");
+            possibilities.add("Cassody");
+            possibilities.add("The Spider");
+            possibilities.add("'Snake Oil' Sal");
+            possibilities.add("George Bush");
+            possibilities.add("Lightning Leroy J");
+            possibilities.add("Cassody");
 
             JPanel jPanel = new JPanel(new GridBagLayout());
             JComboBox comboBox = new JComboBox(possibilities.toArray());
@@ -1248,38 +1238,48 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
             if(input == JOptionPane.OK_OPTION) {
                 String s = (String) comboBox.getSelectedItem();
-                if (Objects.equals(s, "Rebecca")) {
-                    rng = 0;
-                }else if (Objects.equals(s, "Bob")) {
-                    rng = 10;
-                }else if (Objects.equals(s, "Mr. & Mrs. Patel")) {
-                    rng = 25;
-                }else if (Objects.equals(s, "Whitney")) {
-                    rng = 62;
-                }else if (Objects.equals(s, "Luigi")) {
-                    rng = 155;
-                }else if (Objects.equals(s, "John")) {
-                    rng = 232;
-                }else if (Objects.equals(s, "Carl")) {
-                    rng = 348;
-                }else if (Objects.equals(s, "David")) {
-                    rng = 522;
-                }else if (Objects.equals(s, "Doug")) {
-                    rng = 783;
-                }else if (Objects.equals(s, "Sarah")) {
-                    rng = 1174;
-                }else if (Objects.equals(s, "Timothy")) {
-                    rng = 1761;
-                }else if (Objects.equals(s, "Jessie")) {
-                    rng = 2641;
-                }else if (Objects.equals(s, "Peter")) {
-                    rng = 3961;
-                }else if (Objects.equals(s, "George")) {
-                    rng = 5941;
-                }else if (Objects.equals(s, "Cthulhu")) {
-                    rng = 8911;
-                }else if (Objects.equals(s, "Jerry from Hypixel Skyblock")) {
-                    rng = 13366;
+                if (Objects.equals(s, "Basic Bob (default)")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
+                }else if (Objects.equals(s, "Cassody")) {
+                    com = new AI(1.2, 0.2, 0.2, 0.1,
+                            6, 9, 15, 0.5, 0.4,
+                            0.2, 0.6, 0.3, 20,
+                            0.05, 0.7,0.4, 5,
+                            0.2,15, 0.3, 5);
+                }else if (Objects.equals(s, "The Spider")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
+                }else if (Objects.equals(s, "'Snake Oil' Sal")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
+                }else if (Objects.equals(s, "George Bush")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
+                }else if (Objects.equals(s, "Lightning Leroy J")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
+                }else if (Objects.equals(s, "bob")) {
+                    com = new AI(1, 0.2, 0.4, 0,
+                            4, 7, 10, 0.7, 0.5,
+                            0.2, 0.5, 0.2, 15,
+                            -0.1, 0.5, 0.2, 1,
+                            -0.1, 10, 0.2, 3);
                 }
             }
         }

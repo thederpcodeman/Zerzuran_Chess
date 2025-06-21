@@ -15,7 +15,7 @@ public class Main {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
         frame.pack();
-        frame.setTitle("Zerzuran Chess");
+        frame.setTitle("Chesscapades");
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

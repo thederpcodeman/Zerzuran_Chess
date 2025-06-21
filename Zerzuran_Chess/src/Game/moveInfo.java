@@ -33,7 +33,12 @@ public class moveInfo {
             score -= com.safety;
         }
         //peasant
-        //add peasant code
+        if (start.getPiece() instanceof Pawn){
+            Piece p = board.getTile(end.getLocationOnBoard() + (us * 16) - 8).getPiece();
+            if (p != null && p instanceof Pawn && p.color != us && p.moved2 != 0){
+                score += com.pessant;
+            }
+        }
 
         //do the move
         Piece store = end.getPiece();
@@ -82,7 +87,7 @@ public class moveInfo {
         for (Tile i : board.getTiles()){
             controled = false;
             for (Tile j : board.getOccupiedTilesOfColor(us)){
-                if (j.isPlayableMove(i.getLocationOnBoard(), board, false) == 1){
+                if (j.isLegalMove(i.getLocationOnBoard(), board, false)){
                     controled = true;
                 }
             }
@@ -93,7 +98,7 @@ public class moveInfo {
         for (Tile i : board.getTiles()){
             controled = false;
             for (Tile j : board.getOccupiedTilesOfColor(1 - us)){
-                if (j.isPlayableMove(i.getLocationOnBoard(), board, false) == 1){
+                if (j.isLegalMove(i.getLocationOnBoard(), board, false)){
                     controled = true;
                 }
             }
@@ -101,12 +106,13 @@ public class moveInfo {
                 score -= com.control;
             }
         }
-        //center
+        //center & centralcon
         ArrayList<Tile> center = new ArrayList<>();
         center.add(board.getTile(27));
         center.add(board.getTile(28));
         center.add(board.getTile(35));
         center.add(board.getTile(36));
+
 
         for (Tile i : center){
             if (i.getPiece() != null){
@@ -115,6 +121,56 @@ public class moveInfo {
                 }
                 else {
                     score -= com.center;
+                }
+            }
+            controled = false;
+            for (Tile j : board.getOccupiedTilesOfColor(us)){
+                if (j.isLegalMove(i.getLocationOnBoard(), board, false)){
+                    controled = true;
+                }
+
+            }
+            if (controled){
+                score += com.centralCon;
+            }
+        }
+
+        //defence
+
+        for (Tile i : board.getOccupiedTilesOfColor(us)){
+            controled = false;
+            for (Tile j : board.getOccupiedTilesOfColor(us)){
+                if (i != j && j.isLegalMove(i.getLocationOnBoard(), board, false)){
+                    controled = true;
+                }
+            }
+            if (controled){
+                score += com.defence;
+            }
+        }
+
+        // threat, check, and checkmate
+
+        for (Tile i : board.getOccupiedTilesOfColor(1 - us)){
+            controled = false;
+            for (Tile j : board.getOccupiedTilesOfColor(us)){
+                if (i != j && j.isLegalMove(i.getLocationOnBoard(), board, false)){
+                    controled = true;
+                }
+            }
+            if (controled){
+                score += com.threat * i.getPiece().value;
+                if (i.getPiece().royal){
+                    score += com.check;
+                    boolean escape = false;
+                    for (Tile j : board.getTiles()){
+                        if (j.isPlayableMove(i.getLocationOnBoard(), board, false) == 1){
+                            escape = true;
+                        }
+                    }
+                    if (!escape){
+                        score += com.checkmate;
+                    }
                 }
             }
         }
