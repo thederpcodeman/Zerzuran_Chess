@@ -181,7 +181,7 @@ public class Cloning {
             return new Seraphim(color);
         }
         if (ran < 0.75){
-            return new Reptilian(color);
+            return new Airplane(color);
         }
         if (ran < 0.75){
             return new France(color);
@@ -343,7 +343,7 @@ public class Cloning {
         } else if (ran == 49){
             return new Paladin(color);
         } else if (ran == 50){
-            return new Reptilian(color);
+            return new Airplane(color);
         } else if (ran == 51){
             return new France(color);
         } else if (ran == 52){

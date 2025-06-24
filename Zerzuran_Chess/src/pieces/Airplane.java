@@ -5,19 +5,19 @@ import Zerzuran_Chess.src.Game.Tile;
 
 import javax.swing.*;
 
-public class Reptilian extends Piece {
-    public Reptilian(int color) {
+public class Airplane extends Piece {
+    public Airplane(int color) {
         super(color);
         value = 14;
-        name = "Mark Zuckerberg";
+        name = "Airplane";
     }
 
     @Override
     public ImageIcon getImageIcon() {
         if(color == 0) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/bRept.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/bAirplane.png"));
         } else if(color == 1) {
-            return(new ImageIcon("Zerzuran_Chess/src/resources/wRept.png"));
+            return(new ImageIcon("Zerzuran_Chess/src/resources/wAirplane.png"));
         } else {
             return null;
         }

@@ -1652,7 +1652,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             }else if (Objects.equals(s, "Paladin")) {
                 tile.setPiece(new Paladin(c));
             } else if (Objects.equals(s, "Reptilian")) {
-                tile.setPiece(new Reptilian(c));
+                tile.setPiece(new Airplane(c));
             }else if (Objects.equals(s, "France")) {
                 tile.setPiece(new France(c));
             }

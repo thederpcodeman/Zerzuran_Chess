@@ -530,7 +530,7 @@ public class Tile extends JPanel {
             } else if (s == "Paladin") {
                 setPiece(new Paladin(piece.getColor()));
             } else if (s == "Reptilian") {
-                setPiece(new Reptilian(piece.getColor()));
+                setPiece(new Airplane(piece.getColor()));
             } else if (s == "France") {
                 setPiece(new France(piece.getColor()));
             }
