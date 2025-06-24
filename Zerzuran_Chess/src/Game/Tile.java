@@ -265,8 +265,8 @@ public class Tile extends JPanel {
         possibilities.add("Gryphon");
         possibilities.add("Gryphon");
 
-        possibilities.add("Gewirr");
-        possibilities.add("Gewirr");
+        possibilities.add("Bull");
+        possibilities.add("Bull");
 
         possibilities.add("Pegasus rider");
         possibilities.add("Pegasus rider");
@@ -358,8 +358,8 @@ public class Tile extends JPanel {
             bonusOptions.add("Quetzalcoatl");
             bonusOptions.add("Wolf");
             bonusOptions.add("Seraphim");
-            bonusOptions.add("Reptilian");
-            bonusOptions.add("Super Bishop");
+            bonusOptions.add("Airplane");
+            bonusOptions.add("France");
 
             bonusOptions.add("Amazon");
             bonusOptions.add("Lion");
@@ -367,7 +367,7 @@ public class Tile extends JPanel {
             bonusOptions.add("Quetzalcoatl");
             bonusOptions.add("Wolf");
             bonusOptions.add("Seraphim");
-            bonusOptions.add("Reptilian");
+            bonusOptions.add("Airplane");
             bonusOptions.add("France");
 
 
@@ -449,7 +449,7 @@ public class Tile extends JPanel {
                 setPiece(new Frog(piece.getColor()));
             } else if (s == "Elephant") {
                 setPiece(new Elephant(piece.getColor()));
-            } else if (s == "Gewirr") {
+            } else if (s == "Bull") {
                 setPiece(new Bull(piece.getColor()));
             } else if (s == "Gryphon") {
                 setPiece(new Gryphon(piece.getColor()));
@@ -529,7 +529,7 @@ public class Tile extends JPanel {
                 setPiece(new Seraphim(piece.getColor()));
             } else if (s == "Paladin") {
                 setPiece(new Paladin(piece.getColor()));
-            } else if (s == "Reptilian") {
+            } else if (s == "Airplane") {
                 setPiece(new Airplane(piece.getColor()));
             } else if (s == "France") {
                 setPiece(new France(piece.getColor()));
