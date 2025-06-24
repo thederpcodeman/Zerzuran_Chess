@@ -303,6 +303,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
 
 
 
+
             AudioPlayer.play("Zerzuran_Chess/src/resources/audio/move-self.wav");
             if (turn == 1){
                 if (wBonusTurns > 0){
@@ -320,6 +321,13 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     recheck = true;
                     turn = 1 - turn;
                 }
+            }
+            // set the title to current player
+            setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
+            if (turn == 1){
+                setTitle("White's turn");
+            }else{
+                setTitle("Black's turn");
             }
             for (int check = 0; check < 64; check++){
                 Piece checked = chessBoard.getTile(check).getPiece();
@@ -468,7 +476,12 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             debugClick(tile);
         }else{
             if (tile.getPiece() == null){
-                setTitle("Chesscapades");
+
+                if (turn == 1){
+                    setTitle("White's turn");
+                }else{
+                    setTitle("Black's turn");
+                }
                 setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
             }else{
                 String newname;
@@ -483,7 +496,11 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                         setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/bUnknown.png"));
                     }
                 }else if (skatter){
-                    newname = "Chesscapades";
+                    if (turn == 1){
+                        newname = "White's turn";
+                    }else{
+                        newname = "Black's turn";
+                    }
                     setIconImage(Toolkit.getDefaultToolkit().getImage("Zerzuran_Chess/src/resources/wKnight.png"));
                 }else{
                     newname = tile.getPiece().name;
@@ -1488,7 +1505,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Step Into Darkness Pawn");//
         possibilities.add("Short Rook (WIP: functions but uses rook image)");//
         possibilities.add("Paladin");//
-        possibilities.add("Reptilian");//
+        possibilities.add("Airplane");//
         possibilities.add("France");//
         possibilities.add("Pawn");//
         possibilities.add("Soldier");//
@@ -1651,7 +1668,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new CheckerButNot(c));
             }else if (Objects.equals(s, "Paladin")) {
                 tile.setPiece(new Paladin(c));
-            } else if (Objects.equals(s, "Reptilian")) {
+            } else if (Objects.equals(s, "Airplane")) {
                 tile.setPiece(new Airplane(c));
             }else if (Objects.equals(s, "France")) {
                 tile.setPiece(new France(c));
