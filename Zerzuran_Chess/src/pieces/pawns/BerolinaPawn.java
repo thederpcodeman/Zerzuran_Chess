@@ -3,16 +3,15 @@ package Zerzuran_Chess.src.pieces.pawns;
 import Zerzuran_Chess.src.Game.Board;
 import Zerzuran_Chess.src.Game.Tile;
 import Zerzuran_Chess.src.pieces.Moves;
-import Zerzuran_Chess.src.pieces.Piece;
 
 import javax.swing.*;
 
-public class BarolinaPawn extends Pawn {
+public class BerolinaPawn extends Pawn {
     private int forwards;
-    public BarolinaPawn(int color) {
+    public BerolinaPawn(int color) {
         super(color);
         value = 1;
-        name = "Barolina Pawn";
+        name = "Berolina Pawn";
     }
 
     @Override

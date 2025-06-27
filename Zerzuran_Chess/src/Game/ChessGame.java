@@ -153,7 +153,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         recheck = true;
         bTrayal = ((int) (Math.random() * 6.5) == 1);
         bStab = ((int) (Math.random() * 5.5) == 1);
-        touchRule = ((int) (Math.random() * 30) == 1);
+        touchRule = false;
         tLocked = false;
         myst = ((int) (Math.random() * 25) == 1);
         skatter = false;
@@ -1578,7 +1578,7 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
             } else if (Objects.equals(s, "Wall")) {
                 tile.setPiece(new Wall(c));
             } else if (Objects.equals(s, "Barolina Pawn")) {
-                tile.setPiece(new BarolinaPawn(c));
+                tile.setPiece(new BerolinaPawn(c));
             } else if (Objects.equals(s, "Rook")) {
                 tile.setPiece(new Rook(c));
             } else if (Objects.equals(s, "Knight")) {

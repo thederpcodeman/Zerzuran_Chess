@@ -10,7 +10,7 @@ public class shortRook extends Rook {
     public shortRook(int color) {
         super(color);
         value = 4;
-        name = "Short Rook";
+        name = "Very Short Rook (so short you can't see it)";
     }
     public ImageIcon getImageIcon() {
         if(color == 0) {

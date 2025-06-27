@@ -232,7 +232,7 @@ public class Cloning {
             return new Prince(color);
         } ran -= 1;
         if (ran < 0.5){
-            return new BarolinaPawn(color);
+            return new BerolinaPawn(color);
         } ran -= 0.5;
         if (ran < 0.5){
             return new Wall(color);
