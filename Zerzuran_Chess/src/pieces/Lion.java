@@ -28,7 +28,7 @@ public class Lion extends Piece {
         int xoffset = newX - x;
         Tile destination = board.getTile(Board.getLocationFromCords(newX, newY));
         if(destination.isOccupied()) {
-            if(destination.getPiece().getColor() == getColor()) {return false;}
+            if(Moves.allClear(color, destination)) {return false;}
         }
         if (Math.abs(yoffset) > 2){
             return false;
