@@ -337,6 +337,11 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 } else if (checked instanceof Mage){
                     ((Mage) checked).mana += 1;
                     chessBoard.getTile(check).setPiece(chessBoard.getTile(check).getPiece());
+                } else if (checked != null && checked.wall && checked instanceof Flux){
+                    ((Flux) checked).duck_power --;
+                    if (((Flux) checked).duck_power <= 0){
+                        checked.wall = false;
+                    }
                 }
             }
 
@@ -465,6 +470,53 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 stalemate();
             }
 
+        } else if (start != null && start.getPiece() != null && start.getPiece() instanceof Shifter) {
+            start.setPiece(start.getPiece());
+            tLocked = false;
+            selectedTile = null;
+            if (decay){
+                cooldown += 1;
+                if (cooldown >= 5){
+                    cooldown = 0;
+                    Tile[] wh = chessBoard.getOccupiedTilesOfColor(1);
+                    Tile sel = wh[((int) (Math.random() * wh.length))];
+                    if (sel.getPiece().royal){
+                        sel = wh[((int) (Math.random() * wh.length))];
+                    }
+                    sel.setPiece(null);
+                    Tile[] bl = chessBoard.getOccupiedTilesOfColor(0);
+                    sel = bl[((int) (Math.random() * bl.length))];
+                    if (sel.getPiece().royal){
+                        sel = bl[((int) (Math.random() * bl.length))];
+                    }
+                    sel.setPiece(null);
+                }
+            }
+            if (turn == 1){
+                if (wBonusTurns > 0){
+                    recheck = false;
+                    wBonusTurns --;
+                }else{
+                    recheck = true;
+                    turn = 1 - turn;
+                }
+            }else if (turn == 0){
+                if (bBonusTurns > 0){
+                    recheck = false;
+                    bBonusTurns --;
+                }else{
+                    recheck = true;
+                    turn = 1 - turn;
+                }
+            }
+
+            start.setBackground(start.getColor());
+            if (!tLocked){
+                selectedTile = null;
+                for (Tile rTile : chessBoard.getTiles()) {
+                    rTile.setBackground(rTile.getColor());
+                }
+            }
         }
     }
 
@@ -513,6 +565,12 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                     }
                     if (tile.getPiece().wall){
                         newname += " [Protected]";
+                    }
+                    if (tile.getPiece() instanceof Flux){
+                        Flux pi = (Flux) tile.getPiece();
+                        if (pi.form == 5){
+                            newname += " (duck power: " + ((pi.duck_power) + ")");
+                        }
                     }
                 }
                 setTitle(newname);
@@ -1507,6 +1565,9 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
         possibilities.add("Paladin");//
         possibilities.add("Airplane");//
         possibilities.add("France");//
+        possibilities.add("Shifter");//
+        possibilities.add("Metamorph");//
+        possibilities.add("Flux");//
         possibilities.add("Pawn");//
         possibilities.add("Soldier");//
         possibilities.add("Pikeman");//
@@ -1672,6 +1733,10 @@ public class ChessGame extends JFrame implements MouseListener, MouseMotionListe
                 tile.setPiece(new Airplane(c));
             }else if (Objects.equals(s, "France")) {
                 tile.setPiece(new France(c));
+            }else if (Objects.equals(s, "Shifter")) {
+                tile.setPiece(new Shifter(c));
+            }else if (Objects.equals(s, "Flux")) {
+                tile.setPiece(new Flux(c));
             }
         }
     }
