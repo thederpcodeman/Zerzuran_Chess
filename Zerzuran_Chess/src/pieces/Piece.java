@@ -14,11 +14,14 @@ public abstract class Piece {
     public int value;
     public boolean bomb;
     public String name;
+    public String fen;
+    public int damage;
 
     public Piece(int color) {
         name = "Piece";
         bomb = false;
         value = 0;
+        damage = 0;
         royal = false;
         wall = false;
         this.color = color;

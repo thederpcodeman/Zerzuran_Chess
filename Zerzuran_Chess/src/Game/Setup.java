@@ -12,27 +12,45 @@ import java.util.ArrayList;
 
 public class Setup {
     public static void refresh(Board chessBoard){
-        double rand = (Math.random() * (9.1)); // 9
+        double rand = (Math.random() * (9.4)); // 9
         if (rand < 1.5){
-            Setup.rChess(chessBoard);
+            Setup.rChess(chessBoard);//
         }else if (rand < 2.5){
-            Setup.powerChess(chessBoard);
-        }else if (rand < 3.5) {
-            Setup.revoltChess(chessBoard);
+            Setup.powerChess(chessBoard);//
+        }else if (rand < 3) {
+            Setup.revoltChess(chessBoard);//
         }else if (rand < 4){
-            Setup.fearChess(chessBoard);
-        }else if (rand < 5){
-            Setup.grandChess(chessBoard);
-        }else if (rand < 5.5) {
-            Setup.superChess(chessBoard);
-        }else if (rand < 7.5){
-            Setup.twoThirdsChess(chessBoard);
-        }else if (rand < 8.5){
-            Setup.twoThirdsRevoltChess(chessBoard);
+            Setup.fearChess(chessBoard);//
+        }else if (rand < 4.5){
+            Setup.grandChess(chessBoard);//
+        }else if (rand < 5) {
+            Setup.superChess(chessBoard);//
+        }else if (rand < 7){
+            Setup.twoThirdsChess(chessBoard);//
+        }else if (rand < 8){
+            Setup.twoThirdsRevoltChess(chessBoard);//
+        }else if (rand < 8.3){
+            Setup.cavalryChess(chessBoard);//
+        }else if (rand < 8.7){
+            Setup.rHoardChess(chessBoard);//
+        }else if (rand < 8.8){
+            Setup.weakChess(chessBoard);//
+        }else if (rand < 8.85){
+            Setup.checkersVChess(chessBoard);//
+        }else if (rand < 8.9){
+            Setup.hoardChess(chessBoard);//
+        }else if (rand < 8.95){
+            Setup.MaharajahChess(chessBoard);//
         }else if (rand < 9){
-            Setup.cavalryChess(chessBoard);
+            Setup.upSideDownChess(chessBoard);//
+        }else if (rand < 9.02){
+            Setup.egChess(chessBoard);//
+        }else if (rand < 9.05){
+            Setup.regChess(chessBoard);//
+        }else if (rand < 9.2){
+            Setup.rHoardChess(chessBoard);//
         }else {
-            Setup.stepChess(chessBoard);
+            Setup.stepChess(chessBoard);//
         }
         Setup.fairness(chessBoard);
         Setup.mods(chessBoard);
@@ -186,7 +204,7 @@ public class Setup {
                 chessBoard.getTile(i).setPiece(Cloning.rPawn(1));
             }
         }
-    }
+    }//
     public static void revoltChess(Board chessBoard){
         //setup black pieces
         chessBoard.getTile(0).setPiece(new Rook(0));
@@ -213,7 +231,7 @@ public class Setup {
             Tile tile = (Tile) chessBoard.getComponent(i);
             tile.setPiece(Cloning.rPawn(1));
         }
-    }
+    }//
     public static void twoThirdsRevoltChess(Board chessBoard){
         // 2/3 revolt
         //setup black pieces
@@ -289,7 +307,7 @@ public class Setup {
                 chessBoard.getTile(i).setPiece(Cloning.rPawn(1));
             }
         }
-    }
+    }//
     public static void grandChess(Board chessBoard){
         //setup black pieces
         chessBoard.getTile(0).setPiece(Cloning.Royal(0));
@@ -316,7 +334,7 @@ public class Setup {
             Tile tile = (Tile) chessBoard.getComponent(i);
             tile.setPiece(Cloning.rPawn(1));
         }
-    }
+    }//
     public static void superChess(Board chessBoard){
         //B.S.O.P. chess
 
@@ -345,7 +363,7 @@ public class Setup {
             Tile tile = (Tile) chessBoard.getComponent(i);
             tile.setPiece(Cloning.rPawn(1));
         }
-    }
+    }//
     public static void powerChess(Board chessBoard){
         //setup black pieces
         chessBoard.getTile(0).setPiece(Cloning.Advanced(0));
@@ -379,7 +397,7 @@ public class Setup {
             Tile tile = (Tile) chessBoard.getComponent(i);
             tile.setPiece(Cloning.rPawn(1));
         }
-    }
+    }//
     public static void cavalryChess(Board chessBoard){
         //cavalry chess
 
@@ -407,7 +425,7 @@ public class Setup {
         for (int i = 48; i < 56; i++) {
             chessBoard.getTile(i).setPiece(new Soldier(1));
         }
-    }
+    }//
     public static void stepChess(Board chessBoard){
         //cavalry chess
 
@@ -420,6 +438,7 @@ public class Setup {
         for (int i = 16; i < 24; i++) {
             chessBoard.getTile(i).setPiece(new Pawn(0));
         }
+        //setup white pieces
         for (int i = 48; i < 56; i++) {
             Piece p = new StepPawn(1);
             p.royal = true;
@@ -428,7 +447,7 @@ public class Setup {
         for (int i = 40; i < 48; i++) {
             chessBoard.getTile(i).setPiece(new Pawn(1));
         }
-    }
+    }//
     public static void fearChess (Board chessBoard){
         for (int i = 0; i < 16; i++) {
             Tile tile = (Tile) chessBoard.getComponent(i);
@@ -442,7 +461,7 @@ public class Setup {
         chessBoard.getTile(i).setPiece(Cloning.Royal(0));
         i = (int) (Math.random() * 8);
         chessBoard.getTile(i + 56).setPiece(Cloning.Royal(1));
-    }
+    }//
     public static void rChess (Board chessBoard){
         // 960
         //setup black pieces
@@ -470,7 +489,7 @@ public class Setup {
             Tile tile = (Tile) chessBoard.getComponent(i);
             tile.setPiece(Cloning.rPawn(1));
         }
-    }
+    }//
     public static void egChess (Board chessBoard){
         chessBoard.getTile(4).setPiece(new King(0));
         for (int i = 8; i < 16; i++) {
@@ -545,7 +564,6 @@ public class Setup {
             tile.setPiece(new Pawn(0));
         }
     }
-
     public static void MaharajahChess (Board chessBoard){
         //setup black pieces
         chessBoard.getTile(0).setPiece(new Rook(0));
