@@ -12,6 +12,7 @@ public class CheckerButNot extends Pawn {
         super(color);
         value = 2;
         name = "Checker (pawn)";
+        fen = "Ch";
     }
 
     public ImageIcon getImageIcon() {

@@ -12,6 +12,7 @@ public class Pikeman extends Pawn {
         super(color);
         value = 1;
         name = "Pikeman (pawn)";
+        fen = "pk";
     }
 
     @Override

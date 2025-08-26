@@ -14,6 +14,7 @@ public class King extends Piece {
         royal = true;
         value = 3;
         name = "King";
+        fen = "ki";
     }
 
     @Override

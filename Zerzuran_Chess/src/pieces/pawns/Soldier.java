@@ -10,6 +10,7 @@ public class Soldier extends Pawn {
     public Soldier(int color){
         super(color);
         name = "Soldier (pawn)";
+        fen = "sl";
     }
 
     public ImageIcon getImageIcon() {

@@ -12,6 +12,7 @@ public class Checker extends Pawn {
         super(color);
         value = 2;
         name = "Checker (pawn)";
+        fen = "ch";
     }
 
     public ImageIcon getImageIcon() {

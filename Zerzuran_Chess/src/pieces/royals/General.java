@@ -14,6 +14,7 @@ public class General extends Piece {
         super(color);
         value = 5;
         name = "General";
+        fen = "ge";
         royal = true;
     }
 

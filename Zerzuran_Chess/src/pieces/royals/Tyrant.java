@@ -13,6 +13,7 @@ public class Tyrant extends Piece {
         value = 3;
         this.royal = true;
         name = "Tyrant";
+        fen = "ty";
     }
 
     @Override

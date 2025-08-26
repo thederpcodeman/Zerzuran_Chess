@@ -13,6 +13,7 @@ public class Theocrat extends Piece {
         super(color);
         value = 7;
         name = "Theocrat";
+        fen = "th";
         royal = true;
     }
 

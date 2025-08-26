@@ -10,6 +10,7 @@ public class Wall extends Pawn {
         super(color);
         wall = true;
         name = "Wall (pawn)";
+        fen = "wa";
     }
 
     public ImageIcon getImageIcon() {

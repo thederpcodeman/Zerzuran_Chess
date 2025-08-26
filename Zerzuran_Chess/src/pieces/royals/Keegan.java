@@ -14,6 +14,7 @@ public class Keegan extends Piece {
         value = 4;
         this.royal = true;
         name = "Keegan";
+        fen = "ke";
     }
 
     @Override

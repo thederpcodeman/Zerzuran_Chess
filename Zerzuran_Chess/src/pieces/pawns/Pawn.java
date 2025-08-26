@@ -13,6 +13,7 @@ public class Pawn extends Piece {
         super(color);
         value = 1;
         name = "Pawn";
+        fen = "pn";
     }
 
     @Override

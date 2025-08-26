@@ -11,6 +11,7 @@ import javax.swing.*;
             super(color);
             value = 3;
             name = "Prince (pawn)";
+            fen = "pr";
         }
 
         public ImageIcon getImageIcon() {

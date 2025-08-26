@@ -12,6 +12,7 @@ public class StepPawn extends Prince {
         super(color);
         value = 2;
         name = "Pawn";
+        fen = "pn";
         setForwardDirection(getForwardDirection() * -1);
     }
 

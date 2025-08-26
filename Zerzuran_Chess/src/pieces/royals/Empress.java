@@ -13,6 +13,7 @@ public class Empress extends Piece {
         value = 6;
         royal = true;
         name = "Empress";
+        fen = "em";
     }
 
     @Override

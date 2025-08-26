@@ -12,6 +12,7 @@ public class BerolinaPawn extends Pawn {
         super(color);
         value = 1;
         name = "Berolina Pawn";
+        fen = "bp";
     }
 
     @Override

@@ -13,6 +13,7 @@ public class Flag extends Piece {
         royal = true;
         value = 4;
         name = "Flag bearer";
+        fen = "fl";
     }
 
     @Override

@@ -11,6 +11,7 @@ public class Militia extends Pawn {
         super(color);
         value = 1;
         name = "Militia (pawn)";
+        fen = "mi";
     }
 
     public ImageIcon getImageIcon() {

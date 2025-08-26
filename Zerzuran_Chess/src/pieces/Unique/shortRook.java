@@ -11,6 +11,7 @@ public class shortRook extends Rook {
         super(color);
         value = 4;
         name = "Very Short Rook (so short you can't see it)";
+        fen = "sr";
     }
     public ImageIcon getImageIcon() {
         if(color == 0) {
