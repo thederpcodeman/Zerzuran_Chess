@@ -10,6 +10,7 @@ public class Amazon extends Piece {
         super(color);
         value = 13;
         name = "Amazon";
+        fen = "am";
     }
 
     @Override

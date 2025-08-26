@@ -10,6 +10,7 @@ public class Templar extends Piece {
         super(color);
         value = 7;
         name = "Templar";
+        fen = "te";
     }
 
     @Override

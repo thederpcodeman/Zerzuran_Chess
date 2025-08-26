@@ -10,6 +10,7 @@ public class Metamorph extends Shifter {
         super(color);
         value = 13;
         name = "Metamorph";
+        fen = "me";
         form = (int) (Math.random() * 3);
     }
 

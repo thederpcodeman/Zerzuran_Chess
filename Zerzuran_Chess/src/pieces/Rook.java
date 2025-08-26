@@ -10,6 +10,7 @@ public class Rook extends Piece {
         super(color);
         value = 5;
         name = "Rook";
+        fen = "ro";
     }
 
     @Override

@@ -10,6 +10,7 @@ public class Gryphon extends Piece {
         super(color);
         value = 8;
         name = "Gryphon";
+        fen = "gr";
     }
 
     @Override

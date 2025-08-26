@@ -10,6 +10,7 @@ public class Buffalo extends Piece {
         super(color);
         value = 7;
         name = "Buffalo";
+        fen = "bf";
     }
 
     @Override

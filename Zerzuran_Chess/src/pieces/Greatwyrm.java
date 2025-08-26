@@ -10,6 +10,7 @@ public class Greatwyrm extends Piece {
         super(color);
         value = 14;
         name = "Greatwyrm";
+        fen = "gw";
     }
 
     @Override

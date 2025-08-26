@@ -13,6 +13,7 @@ public class Seraphim extends Bladedancer {
         super(color);
         value = 12;
         name = "Seraphim";
+        fen = "se";
         bm = true;
     }
     public ImageIcon getImageIcon() {

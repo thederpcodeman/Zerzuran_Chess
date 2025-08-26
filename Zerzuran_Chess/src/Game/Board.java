@@ -146,7 +146,11 @@ public class Board extends JPanel {
                     fen.append(empty);
                     empty = 0;
                 }else {
-                    fen.append(Fen.getFen(piece));
+                    String f = piece.fen;
+                    if (piece.getColor() == 1){
+                        f = f.toUpperCase();
+                    }
+                    fen.append(f);
                 }
             }
         }

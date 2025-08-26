@@ -13,6 +13,7 @@ public class Flux extends Shifter {
         name = "Flux";
         form = (int) (Math.random() * 5);
         duck_power = 0;
+        fen = "fl";
     }
 
     @Override

@@ -12,6 +12,7 @@ public class Archmage extends Piece {
         value = 8;
         mana = -1;
         name = "Archmage (mana: ∞)";
+        fen = "am";
     }
 
     @Override

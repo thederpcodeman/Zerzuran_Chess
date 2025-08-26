@@ -10,6 +10,7 @@ public class Berserker extends Piece {
         super(color);
         value = 6;
         name = "Berserker";
+        fen = "Br";
     }
 
     @Override

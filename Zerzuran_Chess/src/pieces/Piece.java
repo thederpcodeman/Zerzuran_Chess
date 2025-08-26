@@ -19,6 +19,7 @@ public abstract class Piece {
 
     public Piece(int color) {
         name = "Piece";
+        fen = "?";
         bomb = false;
         value = 0;
         damage = 0;

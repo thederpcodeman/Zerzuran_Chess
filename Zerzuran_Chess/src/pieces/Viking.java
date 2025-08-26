@@ -10,6 +10,7 @@ public class Viking extends Piece {
         super(color);
         value = 3;
         name = "Viking";
+        fen = "vi";
     }
 
     @Override

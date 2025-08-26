@@ -12,6 +12,7 @@ public class Spearman extends Piece {
         super(color);
         value = 1;
         name = "Spearman";
+        fen = "sm";
     }
 
     @Override

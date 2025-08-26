@@ -12,6 +12,7 @@ public class Wolf extends Piece {
         value = 10;
         speed = 3;
         name = "Wolf";
+        fen = "wo";
     }
 
     @Override

@@ -11,6 +11,7 @@ public class Shifter extends Piece {
         super(color);
         value = 7;
         name = "Shifter";
+        fen = "sh";
         form = (int) (Math.random() * 3);
     }
 

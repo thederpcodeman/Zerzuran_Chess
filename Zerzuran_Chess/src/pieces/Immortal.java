@@ -12,6 +12,7 @@ public class Immortal extends Piece{
             wall = true;
             value = 4;
             name = "Immortal";
+            fen = "im";
         }
 
         @Override

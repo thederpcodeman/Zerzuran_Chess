@@ -29,6 +29,7 @@ public class AugmentedKnight extends Piece {
         augment2 = (-1);
         unlock = true;
         unlock2 = false;
+        fen = "ak";
     }
 
     @Override

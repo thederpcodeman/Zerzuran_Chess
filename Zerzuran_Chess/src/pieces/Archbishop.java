@@ -10,6 +10,7 @@ public class Archbishop extends Piece {
         super(color);
         value = 7;
         name = "Archbishop";
+        fen = "ab";
     }
 
     @Override

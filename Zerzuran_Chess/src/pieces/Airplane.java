@@ -10,6 +10,7 @@ public class Airplane extends Piece {
         super(color);
         value = 14;
         name = "Airplane";
+        fen = "ai";
     }
 
     @Override

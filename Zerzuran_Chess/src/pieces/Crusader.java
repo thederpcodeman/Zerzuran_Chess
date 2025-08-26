@@ -10,6 +10,7 @@ public class Crusader extends Piece {
         super(color);
         value = 3;
         name = "Crusader";
+        fen = "cr";
     }
 
     @Override

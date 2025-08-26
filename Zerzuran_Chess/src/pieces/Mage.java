@@ -12,6 +12,7 @@ public class Mage extends Piece {
         value = 5;
         mana = -1;
         name = "Mage";
+        fen = "ma";
     }
 
     @Override

@@ -10,6 +10,7 @@ public class Lion extends Piece {
         super(color);
         value = 12;
         name = "Lion";
+        fen = "li"
     }
 
     @Override

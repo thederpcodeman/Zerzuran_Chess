@@ -10,6 +10,7 @@ public class Bow extends Piece {
         super(color);
         value = 7;
         name = "Archer";
+        fen = "ar";
     }
 
     @Override

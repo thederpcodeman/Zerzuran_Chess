@@ -11,6 +11,7 @@ public class Chancellor extends Piece{
         super(color);
         value = 9;
         name = "Chancellor";
+        fen = "ch";
     }
 
     @Override

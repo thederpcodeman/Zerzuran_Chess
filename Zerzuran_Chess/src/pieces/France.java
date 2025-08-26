@@ -10,6 +10,7 @@ public class France extends Piece {
         super(color);
         value = 7;
         name = "France";
+        fen = "fr";
     }
 
     @Override

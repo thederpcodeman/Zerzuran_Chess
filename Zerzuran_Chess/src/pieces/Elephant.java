@@ -10,6 +10,7 @@ public class Elephant extends Piece {
         super(color);
         value = 2;
         name = "Elephant";
+        fen = "el";
     }
 
     @Override

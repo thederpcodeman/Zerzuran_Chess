@@ -10,6 +10,7 @@ public class Boat extends Piece {
         super(color);
         value = 5;
         name = "Ship";
+        fen = "sh";
     }
 
     @Override

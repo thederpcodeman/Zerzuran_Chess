@@ -10,6 +10,7 @@ public class Paladin extends Piece {
         super(color);
         value = 6;
         name = "Paladin";
+        fen = "pl";
     }
 
     @Override
