@@ -14,6 +14,7 @@ public class Bladedancer extends Piece {
         super(color);
         value = 7;
         name = "Assassin";
+        fen = "as";
         bonusMove = true;
     }
 

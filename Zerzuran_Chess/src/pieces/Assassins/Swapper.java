@@ -12,6 +12,7 @@ public class Swapper extends Piece {
         super(color);
         value = 5;
         name = "Assassin";
+        fen = "as";
     }
 
     @Override

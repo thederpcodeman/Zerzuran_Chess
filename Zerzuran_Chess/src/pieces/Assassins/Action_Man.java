@@ -13,6 +13,7 @@ public class Action_Man extends Piece {
         super(color);
         value = 6;
         name = "Assassin";
+        fen = "as";
     }
 
     @Override

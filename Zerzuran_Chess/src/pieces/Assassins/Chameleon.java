@@ -11,6 +11,7 @@ public class Chameleon extends Piece {
     public Chameleon(int color) {
         super(color);
         name = "Assassin";
+        fen = "as";
         s = Cloning.Fear(color);
         value = s.value + 1;
         wall = s.wall;

@@ -14,6 +14,7 @@ public class Shadowmancer extends Piece {
         super(color);
         value = 8;
         name = "Assassin";
+        fen = "as";
         cR = false;
     }
 
